@@ -1,0 +1,39 @@
+### DATE : 2018.03.15 (pm 12:54)
+
+
+### 프로젝트 셋팅
+#1. web.xml에서 스프링 설정파일 경로, 인코딩 등 셋팅
+#2. WEB-INF/spring/appServlet에서 스프링 설정파일, DB 등 셋팅
+#3. Server는 Tomcat v7.0 사용 (Build Path에서 Tomcat v8.0으로 셋팅되있으면 v7.0으로 변경)
+#4. 한글 깨질때는 properties에서 인코딩 UTF-8로 셋팅
+
+
+
+### 폴더, 파일정리
+#1. 각 폴더 정리는 각 파일 활용도에 맞게 정리
+#2. 폴더별 네이밍은 YT_폴더명 (ex : YT_MAIN)
+#3. CSS, JAVASCRIPT는 HTML태그에 넣지 말고 최대한 파일 분리
+#4. JSP파일명이 main.jsp 이면 main.jsp에 적용되는 JAVASCRIPT / CSS 파일 명은 각각 main.js , main.css 로 적용 (JSP랑 이름 통일)
+#5. JAVA파일의 패키지명은 각 아래 명시된 이름으로 함 (예시로 Contoller 패키지는 만들어 두었음)
+5-1 Controller -> com.yt.controller
+5-2 Dao -> com.yt.dao
+5-3 Service -> com.yt.service
+5-4 Mapper -> com.yt.mapper
+
+
+
+### 코딩 관련
+#1. 코딩은 최대한 WARNING 없게 코딩 (이클립스의 코딩 라인의 노란색 배경 ! 표시 없게)
+#2. 소스 라인 최대한 깔끔하게 정리
+#3. 주석은 기능의 가장 큰틀에 적용하되, 본인이 판단하기 쉽게 변수명 등에 주석 달아도 됌
+#4. CSS, JS 적용 방법은 아래 명시 (자세한 적용 예시는 main.jsp에 적용함)
+4-1 <link href="${pageContext.request.contextPath}/resources/css/CSS폴더명/CSS이름" rel="stylesheet" type="text/css">
+4-2 <script src="${pageContext.request.contextPath}/resources/script/JS폴더명/JS이름" type="text/javascript"></script>
+
+
+
+### 깃허브
+#1. 깃허브를 커밋 하기 전에는 꼭 Pull 먼저 하고 커밋
+#2. 작업자들끼리 같은 파일 수정하지않기
+#3. 커밋할때 Commit Message는 [이름] 내용  식으로 함
+#4. 커밋 메세지는 asdfasdf같이 아무거나 작성하지 말고 1~2줄 정도로 간략히 정리해서 커밋

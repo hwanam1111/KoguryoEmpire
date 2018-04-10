@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+
+* {
+
+}
+
+ 
+.container {
+	width: 50%;
+}
+
+.container div {
+	text-align: left;
+}
+
+
+.container div p {
+	margin-top:35px;
+}
+
+
+.container div p:NTH-CHILD(1) {
+	color:#ff0000;
+	font-size:17px;
+}
+
+.container div p:LAST-CHILD {
+	color:#ff0000;
+}

@@ -8,7 +8,30 @@ public class MainController {
 
 	@RequestMapping("km_main")
 	public String main() {
-		System.out.println("mainPage �룞�옉");
+		
 		return "km_main/main";
 	}
+	
+	
+	@RequestMapping("km_login")
+	public String login() {
+		
+		return "km_main/login";
+	}
+	
+	
+	@RequestMapping("km_join")
+	public String join() {
+		
+		return "km_main/join";
+	}
+	
+	
+	@RequestMapping("joinFormOk")
+	public String joinFormOk() {
+		
+		return "";
+	}
+	
+	
 }

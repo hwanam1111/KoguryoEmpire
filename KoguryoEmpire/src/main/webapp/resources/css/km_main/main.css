@@ -4,40 +4,33 @@
 	
 }
 
-header {
-	height: 100px;
-	border-bottom: 1px solid #777;
+section#main_contents_1 { 
+	width: 100%;
+	z-index: -1;
 }
 
-nav {
-	text-align: center;
+section#main_contents_1 > img {
+	width: 100%;
+	position: relative;
+	bottom: 10px;
 }
 
-nav > img {
-	float: left; 
-	margin-top:16.5px;
-	margin-left:50px;
+
+section#main_contents_2 {
+	width: 80%;
 }
 
-nav > ul {
-	float: right;
-	line-height:100px;
-	margin-right:50px;
-}
 
-nav > ul > li {
-	float: left;
-	width:120px;
-}
 
-nav > ul > li > ul {
-	float:left;
-}
 
-nav > ul > li > ul > li {
-	display: none;
-}
 
-nav > ul > li > ul > li > a {
-	color:#ff0000;
-}
+
+
+
+
+
+
+
+
+
+

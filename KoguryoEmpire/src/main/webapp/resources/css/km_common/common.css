@@ -32,3 +32,58 @@ a {
 a:hover {
 	text-decoration: none;
 }
+
+
+.clear {
+	clear: both;
+}
+
+
+header {
+	position: relative;
+	height: 100px;
+	border-bottom: 1px solid #777;
+	z-index: 1;
+	background-color: #fafafa;
+}
+
+nav {
+	text-align: center;
+}
+
+nav > a > img {
+	float: left; 
+	margin-top: 16.5px;
+	margin-left: 50px;
+}
+
+nav > ul {
+	float: right;
+	line-height: 100px;
+	margin-right: 50px;
+}
+
+nav > ul > li {
+	float: left;
+	width: 120px;
+	cursor: pointer;
+}
+
+nav > ul > li:hover > ul > li{
+	color:#f00;
+	display: block;
+}
+
+nav > ul > li > ul {
+	float: left;
+	position: absolute;
+}
+
+nav > ul > li > ul > li {
+	display: none;
+	line-height: 50px;
+}
+
+nav > ul > li > ul > li > a {
+	color: #ff0000;
+}

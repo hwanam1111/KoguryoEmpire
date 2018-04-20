@@ -1,34 +1,35 @@
 @CHARSET "UTF-8";
 
 * {
-    text-align : center;
-    font-size:15px;
-    font-family: 'Hanna', sans-serif;
+	text-align: center;
+	font-size: 15px;
+	font-family: 'Hanna', sans-serif;
 }
 
 .table-condensed {
-	margin-top:20px;
-	width:70%; 
+	margin-top: 20px;
+	width: 70%;
 }
 
 tr, td {
-    border:1px solid #000;
-    height:19.5px;
+	border: 1px solid #000;
+	height: 19.5px;
 }
 
 #topMenu {
-    background-color:#999; font-weight:900;
+	background-color: #999;
+	font-weight: 900;
 }
 
 /* 추천권 없음 */
 .noCard {
-    color:red;
+	color: red;
 }
 /* 군인 */
 .military {
-    color:blue;
+	color: blue;
 }
 /* 부계정 */
 .second {
-    color:green;
+	color: green;
 }

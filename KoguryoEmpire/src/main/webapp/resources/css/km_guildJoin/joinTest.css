@@ -1,14 +1,13 @@
 @CHARSET "UTF-8";
 
 * {
-
+	
 }
 
- 
 .container {
 	width: 70%;
 }
 
-.container > img {
-	width:100%;
+.container>img {
+	width: 100%;
 }

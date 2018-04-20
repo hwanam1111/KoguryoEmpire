@@ -4,33 +4,17 @@
 	
 }
 
-section#main_contents_1 { 
+section#main_contents_1 {
 	width: 100%;
 	z-index: -1;
 }
 
-section#main_contents_1 > img {
+section#main_contents_1>img {
 	width: 100%;
 	position: relative;
 	bottom: 10px;
 }
 
-
 section#main_contents_2 {
 	width: 80%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

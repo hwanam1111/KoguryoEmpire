@@ -17,9 +17,7 @@
 			<li>
 				게스트
 				<ul>
-					<li><a href="km_guildPublic.do">길드홍보</a></li>
 					<li><a href="km_leaguePublic.do">리그홍보</a></li>
-					<li><a href="km_guestPhoto.do">손님사진</a></li>
 					<li><a href="km_guestFree">손님수다</a></li>
 				</ul>
 			</li>

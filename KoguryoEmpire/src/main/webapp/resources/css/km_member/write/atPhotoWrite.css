@@ -9,17 +9,17 @@
 }
 
 h3 {
-	margin-top: 80px;
+	margin: 50px 0 30px 0;
+}
+
+select {
+	margin-top: 30px;
 }
 
 .form-group {
 	margin-top: 30px;
 }
-
-.form-group>label {
-	margin-bottom: 20px;
-}
-
+	
 .form-group>input {
 	height: 55px;
 }

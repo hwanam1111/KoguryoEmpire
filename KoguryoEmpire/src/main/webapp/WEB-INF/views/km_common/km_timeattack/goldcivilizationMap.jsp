@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+putMap += "<option value='황금문명 오르에트 황금 좌표'>황금문명 오르에트 황금 좌표</option>"
+putMap += "<option value='황금문명 황금신전을 찾아서'>황금문명 황금신전을 찾아서</option>"
+putMap += "<option value='황금문명 고디우스의 분노'>황금문명 고디우스의 분노</option>"
+putMap += "<option value='황금문명 흔들리는 위협'>황금문명 흔들리는 위협</option>"
+putMap += "<option value='황금문명 전설의 황금용광로'>황금문명 전설의 황금용광로</option>"
+putMap += "<option value='황금문명 비밀장치의 위협'>황금문명 비밀장치의 위협</option>"
+putMap += "<option value='황금문명 신비의 황금 콘도르'>황금문명 신비의 황금 콘도르</option>"
+putMap += "<option value='황금문명 용기의 통로'>황금문명 용기의 통로</option>"
+putMap += "<option value='황금문명 CSO 아즈텍'>황금문명 CSO 아즈텍</option>"

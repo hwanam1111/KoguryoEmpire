@@ -14,13 +14,13 @@
 					<li><a href="km_memberPhoto.do">정모사진</a></li>
 				</ul>
 			</li>
-			<li>
+			<!-- 게스트는 나중에 보안문제 해결되면 처리 <li>
 				게스트
 				<ul>
 					<li><a href="km_leaguePublic.do">리그홍보</a></li>
 					<li><a href="km_guestFree">손님수다</a></li>
 				</ul>
-			</li>
+			</li>  -->
 			<li>
 				가입공지
 				<ul>

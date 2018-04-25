@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+putMap += "<option value='공동묘지 해골 손가락'>공동묘지 해골 손가락</option>"
+putMap += "<option value='공동묘지 마왕의 초대'>공동묘지 마왕의 초대</option>"
+putMap += "<option value='공동묘지 해골성 대탐험'>공동묘지 해골성 대탐험</option>"
+putMap += "<option value='공동묘지 유령의 계곡'>공동묘지 유령의 계곡</option>"
+putMap += "<option value='공동묘지 비밀의 수도원'>공동묘지 비밀의 수도원</option>"
+putMap += "<option value='공동묘지 유령습격'>공동묘지 유령습격</option>"
+putMap += "<option value='공동묘지 비밀의 해골제단'>공동묘지 비밀의 해골제단</option>"
+putMap += "<option value='[리버스] 공동묘지 해골 손가락'>[리버스] 공동묘지 해골 손가락</option>"
+putMap += "<option value='[리버스] 공동묘지 유령의 계곡'>[리버스] 공동묘지 유령의 계곡</option>"

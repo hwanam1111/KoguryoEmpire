@@ -1,0 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+putMap += "<option value='월드 뉴욕 대질주'>월드 뉴욕 대질주</option>"
+putMap += "<option value='월드 리오 다운힐'>월드 리오 다운힐</option>"
+putMap += "<option value='월드 두바이 다운타운'>월드 두바이 다운타운</option>"
+putMap += "<option value='월드 파리 에펠탑 다이브'>월드 파리 에펠탑 다이브</option>"
+putMap += "<option value='월드 이탈리아 여행'>월드 이탈리아 여행</option>"
+putMap += "<option value='월드 파리 드라이브'>월드 파리 드라이브</option>"
+putMap += "<option value='월드 런던 나이트'>월드 런던 나이트</option>"
+putMap += "<option value='월드 그리스의 휴일'>월드 그리스의 휴일</option>"
+putMap += "<option value='월드 브라질 스포츠 스타디움'>월드 브라질 스포츠 스타디움</option>"
+putMap += "<option value='더 월드'>더 월드</option>"

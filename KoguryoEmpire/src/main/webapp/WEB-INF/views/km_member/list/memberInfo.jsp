@@ -11,6 +11,52 @@
 	</head>
 	<body>
 		<jsp:include page="/WEB-INF/views/km_common/header.jsp"/>
-
+		<div class="container">
+			<table class="table table-bordered">
+				<tr>
+					<td>No.</td>
+					<td>Title.</td>
+					<td>Writer.</td>
+					<td>Date.</td>
+					<td>View.</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td><a href="km_infoView.do">Member Info Title Test</a></td>
+					<td>KoguryoGuild</td>
+					<td>2018-04-20 12:00</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td><a href="km_infoView.do">Member Info Title Test</a></td>
+					<td>KoguryoGuild</td>
+					<td>2018-04-20 12:00</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td><a href="km_infoView.do">Member Info Title Test</a></td>
+					<td>KoguryoGuild</td>
+					<td>2018-04-20 12:00</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td><a href="km_infoView.do">Member Info Title Test</a></td>
+					<td>KoguryoGuild</td>
+					<td>2018-04-20 12:00</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td><a href="km_infoView.do">Member Info Title Test</a></td>
+					<td>KoguryoGuild</td>
+					<td>2018-04-20 12:00</td> 
+					<td>50</td>
+				</tr>
+			</table>
+			<a href="km_infoWrite.do"><button class="btn">글쓰기</button></a>
+		</div>
 	</body>
 </html> 

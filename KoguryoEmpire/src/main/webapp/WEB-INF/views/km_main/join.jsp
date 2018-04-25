@@ -14,7 +14,7 @@
 
 		<div class="container">
 			<h3>회원가입</h3>
-			<form action="joinFormOk.do">
+			<form>
 				<div class="form-group">
 					<input type="email" class="form-control" id="memberEmail" name="memberEmail" placeholder="이메일 입력">
 				</div>
@@ -30,7 +30,7 @@
 				<div class="form-group">
 					<input type="text" class="form-control" id="memberNickName" name="memberNickName" placeholder="닉네임 입력" maxlength="12">
 				</div>
-				<button type="submit" class="btn">이용약관 동의 및 회원가입</button>
+				<button type="button" class="btn">이용약관 동의 및 회원가입</button>
 				<div class="clear"></div> 
 				<h6>Copyright &copy; 2018 KoguryoEmpire All rights reserved.</h6>
 			</form>

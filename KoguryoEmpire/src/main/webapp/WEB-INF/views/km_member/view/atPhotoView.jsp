@@ -6,7 +6,7 @@
 		<link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/image/km_common/favicon.ico">
 		<link href="${pageContext.request.contextPath}/resources/css/km_common/bootstrap.min.css" rel="stylesheet" type="text/css">
 		<link href="${pageContext.request.contextPath}/resources/css/km_common/common.css" rel="stylesheet" type="text/css">
-		<link href="${pageContext.request.contextPath}/resources/css/km_member/view/noticeView.css" rel="stylesheet" type="text/css">
+		<link href="${pageContext.request.contextPath}/resources/css/km_member/view/atPhotoView.css" rel="stylesheet" type="text/css">
 		<script src="${pageContext.request.contextPath}/resources/script/km_common/jquery-3.3.1.min.js" type="text/javascript"></script>
 	</head>
 	<body>
@@ -16,11 +16,12 @@
 				<tr>
 					<td>고구려마스터</td>
 					<td>K。운영진</td>
-					<td>http://koguryoempire.com/KoguryoEmpire/km_noticeView.do/1</td>
+					<td>http://koguryoempire.com/KoguryoEmpire/km_atMovieView.do/1</td>
 					<td><button>url복사</button></td>
 				</tr>
 			</table>
 			<div class="content">
+			<img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/63/IMG_%28business%29.svg/1200px-IMG_%28business%29.svg.png" alt="타임어택 이미지"><br>
 				Views 테스트
 			</div>
 			<div class="reply">

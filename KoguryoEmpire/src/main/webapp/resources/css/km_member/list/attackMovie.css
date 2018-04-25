@@ -1,5 +1,42 @@
 @CHARSET "UTF-8";
 
 * {
+	
+}
 
+.container {
+	margin-top: 50px;
+}
+
+table tr td:nth-child(1) {
+	width: 5%;
+}
+
+table tr td:nth-child(2) {
+	width: 50%;
+}
+
+table tr td:nth-child(3) {
+	width: 20%;
+}
+
+table tr td:nth-child(4) {
+	width: 20%;
+}
+
+table tr td:nth-child(5) {
+	width: 5%;
+}
+
+.btn {
+	margin-top: 10px;
+	width: 10%;
+	background: #4d4d4d;
+	color: #fff;
+	float: right;
+}
+
+.btn:hover {
+	background: #404040;
+	color: #fff;
 }

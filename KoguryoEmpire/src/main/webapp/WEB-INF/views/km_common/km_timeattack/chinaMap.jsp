@@ -1,0 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+putMap += "<option value='차이나 서안 병마용'>차이나 서안 병마용</option>"
+putMap += "<option value='차이나 골목길 대질주'>차이나 골목길 대질주</option>"
+putMap += "<option value='차이나 서안 병마용 2'>차이나 서안 병마용 2</option>"
+putMap += "<option value='차이나 북경 자금성'>차이나 북경 자금성</option>"
+putMap += "<option value='차이나 상해 동방명주'>차이나 상해 동방명주</option>"
+putMap += "<option value='차이나 북경 스포츠 공원'>차이나 북경 스포츠 공원</option>"
+putMap += "<option value='차이나 북경 경기장'>차이나 북경 경기장</option>"
+putMap += "<option value='차이나 빙등축제'>차이나 빙등축제</option>"
+putMap += "<option value='차이나 황산'>차이나 황산</option>"
+putMap += "<option value='차이나 라사'>차이나 라사</option>"

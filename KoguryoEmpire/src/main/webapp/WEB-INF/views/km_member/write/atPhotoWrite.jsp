@@ -26,7 +26,7 @@
     				<input type="file" id="atphotoPhoto">
 	  			</div>
 	  			<div class="form-group">
-					<input type="text" class="form-control" id="atphotoRider" name="atphotoRider" placeholder="주행자 입력" maxlength="40">
+					<input type="text" class="form-control" id="atphotoRider" name="atphotoRider" placeholder="주행자 입력" maxlength="12">
 				</div>
 	  			<div class="form-group">
 					<input type="text" class="form-control" id="atphotoTime" name="atphotoTime" placeholder="시간 입력" maxlength="40">

@@ -31,7 +31,7 @@
 					<input type="text" class="form-control" id="joinRecommend" name="joinRecommend" placeholder="추천인 입력" maxlength="12">
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control" id="joinGuild" name="joinGuild" placeholder="전 길드 입력" maxlength="20">
+					<input type="text" class="form-control" id="joinLastguild" name="joinLastguild" placeholder="전 길드 입력" maxlength="20">
 				</div>
 				<button type="submit" class="btn">가입 신청</button>
 				

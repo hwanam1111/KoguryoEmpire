@@ -16,22 +16,25 @@
 			<h3>자기소개</h3>
 			<form>
 				<div class="form-group">
-					<input type="text" class="form-control" id="introduceName" name="introduceName" placeholder="이름 입력" maxlength="4">
+					<input type="text" class="form-control" id="infoName" name="infoName" placeholder="이름 입력" maxlength="4">
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control" id="introduceNickname" name="introduceNickname" placeholder="닉네임 입력" maxlength="12">
+					<input type="text" class="form-control" id="infoNickname" name="infoNickname" placeholder="닉네임 입력" maxlength="12"> 
 				</div>
 				<div class="form-group">
-					<input type="Number" class="form-control" id="introduceAge" name="introduceAge" placeholder="나이 입력" maxlength="2">
+					<input type="Number" class="form-control" id="infoAge" name="infoAge" placeholder="나이 입력" maxlength="2">
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control" id="introduceSex" name="introduceSex" placeholder="성별 입력" maxlength="2">
+					<input type="text" class="form-control" id="infoSex" name="infoSex" placeholder="성별 입력" maxlength="2">
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control" id="introduceRecommend" name="introduceRecommend" placeholder="추천인 입력" maxlength="12">
+					<input type="tel" class="form-control" id="infoTel" name="infoTel" placeholder="전화번호 입력" maxlength="13">
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control" id="introduceGuild" name="introduceGuild" placeholder="전 닉네임 입력" maxlength="20">
+					<input type="text" class="form-control" id="infoRecommend" name="infoRecommend" placeholder="추천인 입력" maxlength="12">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" id="infoLastguild" name="infoLastguild" placeholder="전 닉네임 입력" maxlength="20">
 				</div>
 				<button type="submit" class="btn">완료</button>
 				

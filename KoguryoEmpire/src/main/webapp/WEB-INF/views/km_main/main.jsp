@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -17,7 +19,25 @@
 		</section>
 <!-- 		<div class="clear"></div> -->
 		<section id="main_contents_2">
-			
+			<table>
+		        <thead>
+		            <tr>
+		                <th>아이디</th>
+		                <th>비밀번호</th>
+		                <th>이름</th>
+		            </tr>
+		        </thead>
+		        <tbody>
+		            <c:forEach items="${memberList}" var="member">
+		                <tr>
+		                    <td>${member.memEmail}</td>
+		                    <td>${member.memPassword}</td>
+		                </tr>
+		            </c:forEach>
+		        </tbody>
+		    </table>
+
+
 		</section>
 	</body>
 </html> 

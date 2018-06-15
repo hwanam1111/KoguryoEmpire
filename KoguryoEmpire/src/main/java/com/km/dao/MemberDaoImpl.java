@@ -24,5 +24,19 @@ public class MemberDaoImpl implements MemberDao{
         return sqlSession.selectList(Namespace+".selectMember");
     }
 
+	@Override
+	public int insertMember(MemberVO vo) throws Exception {
+		
+		sqlSession.selectOne(Namespace+".insertMember", vo);
+		
+		return 1;
+	}
+
+	@Override
+	public MemberVO idChecked(MemberVO vo) throws Exception {
+
+		return sqlSession.selectOne(Namespace+".idChecked", vo);
+	}
+
 
 }

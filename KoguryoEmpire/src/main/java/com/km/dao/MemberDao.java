@@ -8,4 +8,8 @@ public interface MemberDao {
 
 	public List<MemberVO> selectMember() throws Exception;
 
+	public int insertMember(MemberVO vo) throws Exception;
+
+	public MemberVO idChecked(MemberVO vo) throws Exception;
+
 }

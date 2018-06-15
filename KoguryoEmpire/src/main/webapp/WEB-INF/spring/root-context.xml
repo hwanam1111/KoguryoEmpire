@@ -33,6 +33,9 @@
         <property name="url"
             value="jdbc:log4jdbc:mysql://127.0.0.1:3306/koguryoempire?useSSL=false&amp;serverTimezone=UTC">
         </property>
+        
+        <!-- useUnicode=true&characterEncoding=utf8 -->
+        <!-- useSSL=false&amp;serverTimezone=UTC -->
         <property name="username" value="koguryoempire"></property>
         <property name="password" value="koguryoempire"></property>
     </bean> 

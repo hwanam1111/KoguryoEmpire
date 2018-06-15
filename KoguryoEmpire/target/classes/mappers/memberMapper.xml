@@ -6,7 +6,15 @@
 <mapper namespace="com.km.mapper.memberMapper">
  	
  	<select id="selectMember" resultType="memberVO">
-        SELECT memEmail, memPassword FROM MEMBER;
+        SELECT * FROM MEMBER;
     </select>
+    
+    <insert id="insertMember" parameterType="memberVO">
+    	INSERT INTO member(memEmail, memPassword, memName, memNickname, memBirthday, memIp, memClass, memDate) VALUES(#{memEmail}, #{memPassword}, #{memName}, #{memNickname}, #{memBirthday}, #{memIp}, 1, curdate());
+    </insert>
+    
+    <select id="idChecked" parameterType="memberVO" resultType="memberVO"> 
+		select * from member where memEmail=#{memEmail}
+	</select>
     
 </mapper>

@@ -20,5 +20,21 @@ public class MemberServiceImpl implements MemberService {
  
         return dao.selectMember();
     }
+
+    
+	@Override
+	public int insertMember(MemberVO vo) throws Exception {
+
+		return dao.insertMember(vo);
+	}
+
+
+	@Override
+	public MemberVO selectEmail(MemberVO vo) throws Exception {
+
+		MemberVO result = dao.idChecked(vo);
+
+		return result;
+	}
  
 }

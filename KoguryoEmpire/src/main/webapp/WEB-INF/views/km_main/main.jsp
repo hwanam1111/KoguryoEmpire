@@ -15,7 +15,7 @@
 		<jsp:include page="/WEB-INF/views/km_common/header.jsp"/>
 
 		<section id="main_contents_1">
-			<img src="${pageContext.request.contextPath}/resources/image/km_common/main_image.jpg" alt="메인이미지">
+			<img src="${pageContext.request.contextPath}/resources/image/km_common/main.jpeg" alt="메인이미지">
 		</section>
 <!-- 		<div class="clear"></div> -->
 		<section id="main_contents_2">
@@ -32,6 +32,7 @@
 		                <tr>
 		                    <td>${member.memEmail}</td>
 		                    <td>${member.memPassword}</td>
+		                    <td>${member.memName}</td> 
 		                </tr>
 		            </c:forEach>
 		        </tbody>

@@ -27,13 +27,11 @@ public class MainController {
 	@Inject
     private MemberService service;
 	
-	
-	@RequestMapping(value = "km_main", method = RequestMethod.GET)
-    public String home(Locale locale, Model model) throws Exception{
+	// 메인 페이지
+	@RequestMapping(value = "km_main", method = RequestMethod.GET, produces="text/plain;charset=UTF-8")
+    public String main(Locale locale, Model model) throws Exception{
 		
-		System.out.println(" test :: !!! ");
- 
-        logger.info("home");
+        logger.info("메인페이지");
         
         List<MemberVO> memberList = service.selectMember();
         
@@ -41,14 +39,57 @@ public class MainController {
  
         return "km_main/main";
     }
+	
+	
+//	아이디 중복체크
+	@RequestMapping(value="km_idChecked")
+	public String idchecked(Locale locale, String userid, Model model) throws Exception{
+		
+		logger.info("이메일 중복체크 확인");
+		
+		System.out.println("!!!!!! :: " + userid);
+		
+		MemberVO ok = null;
+		MemberVO vo = new MemberVO();
+		vo.setMemEmail(userid);
+		
+		ok= service.selectEmail(vo);
+		
+		System.out.println("@@@@ :: " + ok);
+		
+		String result="";	
+	
+		if(ok!=null){
+			result="km_main/km_idChecked";
+			model.addAttribute("vo",ok);
+		}else{
+			result="km_main/km_idChecked";
+		}
+		
+		return result;
+	}
+	
+	
+	// 회원가입 처리 부분
+	@RequestMapping(value = "km_joinOk", method = RequestMethod.GET, produces="text/plain;charset=UTF-8")
+	public String joinOk(Locale locale, Model model, MemberVO vo) throws Exception {
+		
+		logger.info("회원가입 처리 확인");
+		
+		int resultCnt = service.insertMember(vo);
+		String result = "";
 
-
-
-//	@RequestMapping("km_main")
-//	public String main() {
-//		System.out.println(" test :: !!! ");
-//		return "km_main/main";
-//	}
+		if ( resultCnt == 0 ){
+			result = "실패당";
+	    } else {
+	        result = "성공이당";
+	    }
+			
+		model.addAttribute("result", result);
+		model.addAttribute("vo", vo);
+		
+		return "km_main/joinOk";
+	}
 	
 	
 	@RequestMapping("km_login")

@@ -20,7 +20,11 @@
 		<script src="${pageContext.request.contextPath}/resources/script/km_common/widgEditor.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<jsp:include page="/WEB-INF/views/km_common/header.jsp"/>
+		<%if(session.getAttribute("login") == null) { %>
+			<jsp:include page="/WEB-INF/views/km_common/header.jsp"/>
+		<%} else { %>
+			<jsp:include page="/WEB-INF/views/km_common/afterHeader.jsp"/>
+		<%} %>
 		<div id="content">
 			<form action=""> <!--  onsubmit="alert('Your submitted HTML was:\n\n' + document.getElementById('noise').value); return false;" -->
 				<div class="form-group">

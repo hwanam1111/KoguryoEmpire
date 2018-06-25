@@ -11,6 +11,8 @@ public interface MemberService {
 	public int insertMember(MemberVO vo) throws Exception;
 
 	public MemberVO selectEmail(MemberVO vo) throws Exception;
-}
 
+	public MemberVO selectMember(MemberVO vo) throws Exception;
+
+}
 

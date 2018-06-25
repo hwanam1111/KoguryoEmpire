@@ -10,18 +10,22 @@
 		<script src="${pageContext.request.contextPath}/resources/script/km_common/jquery-3.3.1.min.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<jsp:include page="/WEB-INF/views/km_common/header.jsp"/>
+		<%if(session.getAttribute("login") == null) { %>
+			<jsp:include page="/WEB-INF/views/km_common/header.jsp"/>
+		<%} else { %>
+			<jsp:include page="/WEB-INF/views/km_common/afterHeader.jsp"/>
+		<%} %>
 
 		<div class="container">
 			<h3>로그인</h3>
-			<form>
+			<form action="km_loginChecked.do">
 				<div class="form-group">
 					<label for="memberEmail">이메일</label>
-					<input type="email" class="form-control" id="memberEmail" name="memberEmail" placeholder="이메일 입력">
+					<input type="email" class="form-control" id="memEmail" name="memEmail" placeholder="이메일 입력">
 				</div>
 				<div class="form-group">
 					<label for="memberPW">비밀번호</label>
-					<input type="password" class="form-control" id="memberPW" name="memberPW" placeholder="비밀번호 입력">
+					<input type="password" class="form-control" id="memPassword" name="memPassword" placeholder="비밀번호 입력">
 				</div>
 				<button type="submit" class="btn">로그인</button>
 				<div id="serche">

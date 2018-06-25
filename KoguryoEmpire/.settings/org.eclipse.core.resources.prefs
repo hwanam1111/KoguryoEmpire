@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+encoding//src/main/java/com/km/controller/AdminController.java=UTF-8
 encoding//src/main/java/com/km/controller/MainController.java=UTF-8
+encoding//src/main/webapp/WEB-INF/views/km_common/returnMessage.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/km_main/login.jsp=UTF-8
 encoding/<project>=UTF-8

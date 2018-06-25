@@ -13,7 +13,11 @@
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	</head>
 	<body>
-		<jsp:include page="/WEB-INF/views/km_common/header.jsp"/>
+		<%if(session.getAttribute("login") == null) { %>
+			<jsp:include page="/WEB-INF/views/km_common/header.jsp"/>
+		<%} else { %>
+			<jsp:include page="/WEB-INF/views/km_common/afterHeader.jsp"/>
+		<%} %>
 
 		<div class="container">
 			<h3>회원가입</h3>

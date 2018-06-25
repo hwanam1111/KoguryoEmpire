@@ -1,3 +1,3 @@
 <script type="text/javascript">
-	location.href = "km_main.do";
+	location.href = "km_main";
 </script>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.km.mapper.joinMapper">
+
+ 	<insert id="guildJoin" parameterType="joinVO" useGeneratedKeys="true" keyProperty="joinNum">
+    	INSERT INTO GUILD_JOIN(joinName, joinNickname, joinAge, joinSex, joinRecommend, joinLastguild, joinIp, joinDate, joinStatus, joinRetestdat) VALUES(#{joinName}, #{joinNickname}, #{joinAge}, #{joinSex}, #{joinRecommend}, #{joinLastguild}, #{joinIp}, curdate(), #{joinStatus}, #{joinRetestdat});
+    </insert>
+    
+    <select id="joinList" resultType="joinVO">
+        SELECT * FROM GUILD_JOIN;
+    </select>
+
+</mapper>

@@ -36,5 +36,14 @@ public class MemberServiceImpl implements MemberService {
 
 		return result;
 	}
+
+
+	@Override
+	public MemberVO selectMember(MemberVO vo) throws Exception {
+		
+		MemberVO result = dao.loginChecked(vo);
+		
+		return result;
+	}
  
 }

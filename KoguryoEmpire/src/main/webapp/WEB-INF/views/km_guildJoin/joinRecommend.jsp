@@ -10,7 +10,11 @@
 		<script src="${pageContext.request.contextPath}/resources/script/km_common/jquery-3.3.1.min.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<jsp:include page="/WEB-INF/views/km_common/header.jsp"/>
+		<%if(session.getAttribute("login") == null) { %>
+			<jsp:include page="/WEB-INF/views/km_common/header.jsp"/>
+		<%} else { %>
+			<jsp:include page="/WEB-INF/views/km_common/afterHeader.jsp"/>
+		<%} %>
 		
 	    <!-- ########################################## -->
 	    <!-- 명단 수정 할 때 Ctrl+F 로 닉네임 or 이름 검색 -->

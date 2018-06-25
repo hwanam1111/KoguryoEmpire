@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page import="com.km.dto.MemberVO"%>
+<%
+	Object obj = session.getAttribute("login");
+	MemberVO mvo = (MemberVO)obj;
+%>
 
 <!DOCTYPE html>
 <html>
@@ -12,7 +17,11 @@
 		<script src="${pageContext.request.contextPath}/resources/script/km_common/jquery-3.3.1.min.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<jsp:include page="/WEB-INF/views/km_common/header.jsp"/>
+		<%if(session.getAttribute("login") == null) { %>
+			<jsp:include page="/WEB-INF/views/km_common/header.jsp"/>
+		<%} else { %>
+			<jsp:include page="/WEB-INF/views/km_common/afterHeader.jsp"/>
+		<%} %>
 
 		<section id="main_contents_1">
 			<img src="${pageContext.request.contextPath}/resources/image/km_common/main.jpeg" alt="메인이미지">

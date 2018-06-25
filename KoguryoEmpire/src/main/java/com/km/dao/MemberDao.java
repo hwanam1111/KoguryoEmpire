@@ -12,4 +12,6 @@ public interface MemberDao {
 
 	public MemberVO idChecked(MemberVO vo) throws Exception;
 
+	public MemberVO loginChecked(MemberVO vo) throws Exception;
+
 }

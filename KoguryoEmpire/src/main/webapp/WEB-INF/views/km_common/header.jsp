@@ -1,4 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<script>
+	function joinCheck() {
+		alert('회원가입후 이용 가능합니다.');
+	}
+</script>
 <header>
 	<nav>
 		<a href="km_main.do"><img src="${pageContext.request.contextPath}/resources/image/km_common/logo.png" alt="로고"></a>
@@ -27,7 +32,7 @@
 					<li><a href="km_joinNotice.do">가입공지</a></li>
 					<li><a href="km_joinTest.do">테스트표</a></li>
 					<li><a href="km_joinRecommend.do">추천맴버</a></li>
-					<li><a href="km_joinCheck.do">가입신청</a></li>
+					<li><a onclick="joinCheck();">가입신청</a></li>
 				</ul>
 			</li>
 			<li><a href="km_login.do">로그인</a></li>
@@ -35,3 +40,4 @@
 		</ul>
 	</nav>
 </header>
+<div style="clear:both"></div>

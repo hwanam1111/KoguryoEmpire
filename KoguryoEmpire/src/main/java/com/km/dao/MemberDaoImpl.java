@@ -38,5 +38,11 @@ public class MemberDaoImpl implements MemberDao{
 		return sqlSession.selectOne(Namespace+".idChecked", vo);
 	}
 
+	@Override
+	public MemberVO loginChecked(MemberVO vo) throws Exception {
+		
+		return sqlSession.selectOne(Namespace+".loginChecked", vo);
+	}
+
 
 }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.km.mapper.adminMapper">
+ 	
+
+	<update id="classUpdate" parameterType="memberVO">
+		UPDATE member SET memClass=#{memClass} WHERE memEmail=#{memEmail}
+	</update>
+	
+	
+	<update id="testUpdate" parameterType="joinVO">
+		UPDATE GUILD_JOIN SET joinStatus=#{joinStatus}, joinRetestday=#{joinRetestday} WHERE joinNum=#{joinNum}
+	</update>
+	
+</mapper>

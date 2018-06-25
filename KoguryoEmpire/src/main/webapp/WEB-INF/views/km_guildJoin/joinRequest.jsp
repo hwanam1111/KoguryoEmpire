@@ -8,13 +8,18 @@
 		<link href="${pageContext.request.contextPath}/resources/css/km_common/common.css" rel="stylesheet" type="text/css">
 		<link href="${pageContext.request.contextPath}/resources/css/km_guildJoin/joinRequest.css" rel="stylesheet" type="text/css">
 		<script src="${pageContext.request.contextPath}/resources/script/km_common/jquery-3.3.1.min.js" type="text/javascript"></script>
+		<script src="${pageContext.request.contextPath}/resources/script/km_join/join.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<jsp:include page="/WEB-INF/views/km_common/header.jsp"/>
+		<%if(session.getAttribute("login") == null) { %>
+			<jsp:include page="/WEB-INF/views/km_common/header.jsp"/>
+		<%} else { %>
+			<jsp:include page="/WEB-INF/views/km_common/afterHeader.jsp"/>
+		<%} %>
 
 		<div class="container">
 			<h3>가입신청</h3>
-			<form>
+			<form id="joinForm">
 				<div class="form-group">
 					<input type="text" class="form-control" id="joinName" name="joinName" placeholder="이름 입력" maxlength="4">
 				</div>
@@ -33,7 +38,8 @@
 				<div class="form-group">
 					<input type="text" class="form-control" id="joinLastguild" name="joinLastguild" placeholder="전 길드 입력" maxlength="20">
 				</div>
-				<button type="submit" class="btn">가입 신청</button>
+				<input type="hidden" value="테스트 대기" name="joinStatus" readonly="readonly">
+				<input type="button" class="btn" id="submitBtn" value="가입 신청">
 				
 				<div class="clear"></div>
 				<h6>Copyright &copy; 2018 KoguryoEmpire All rights reserved.</h6>

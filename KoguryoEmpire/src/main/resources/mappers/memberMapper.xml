@@ -16,5 +16,9 @@
     <select id="idChecked" parameterType="memberVO" resultType="memberVO"> 
 		select * from member where memEmail=#{memEmail}
 	</select>
-    
+	
+	<select id="loginChecked" parameterType="memberVO" resultType="memberVO"> 
+		select * from member where memEmail=#{memEmail} AND memPassword=#{memPassword}
+	</select>
+	
 </mapper>

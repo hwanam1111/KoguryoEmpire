@@ -24,7 +24,7 @@
   	<div class="wrapper">
 	    <div class="sidebar" data-color="purple" data-background-color="white">
 	    	<div class="logo">
-		        <a class="simple-text logo-normal">
+		        <a class="simple-text logo-normal" href="km_main.do">
 		          Koguryo Empire
 		        </a>
 	      	</div>
@@ -75,6 +75,7 @@
 						                    <tbody>
 						                    	<c:forEach items="${joinList}" var="join">
 							                        <tr>
+							                        	<input type="hidden" id="lastNum" value="${join.joinNum}">
 							                        	<td>${join.joinNum}</td>
 							                        	<td>${join.joinName}</td>
 									                    <td>${join.joinNickname}</td>
@@ -82,7 +83,7 @@
 									                    <td>${join.joinSex}</td>
 									                    <td>${join.joinRecommend}</td>
 									                    <td>${join.joinLastguild}</td>
-									                    <td>${join.joinDate}</td> 
+									                    <td><input type="text" class="${join.joinNum}" value="${join.joinDate}" readonly="readonly"></td> 
 									                    <td>${join.joinStatus}</td>
 									                    <form action="km_testUpdate.do">
 										                    <td>
@@ -115,6 +116,78 @@
 	</body>
 	<script>
 	$(function() {
+		var month = "";
+		var day = "";
+		
+		for (var i=1; i<=parseInt($('#lastNum').val()); i++) {
+			if ($('.'+i).val() != undefined) {
+				if ($('.'+i).val().substring(0,3) == 'Mon') {
+					day = "월요일";
+				}
+				else if ($('.'+i).val().substring(0,3) == 'Tue') {
+					day = "화요일";
+				}
+				else if ($('.'+i).val().substring(0,3) == 'Wed') {
+					day = "수요일";
+				}
+				else if ($('.'+i).val().substring(0,3) == 'Thu') {
+					day = "목요일";
+				}
+				else if ($('.'+i).val().substring(0,3) == 'Fri') {
+					day = "금요일";
+				}
+				else if ($('.'+i).val().substring(0,3) == 'Sat') {
+					day = "토요일";
+				}
+				else if ($('.'+i).val().substring(0,3) == 'Sun') {
+					day = "일요일";
+				}
+				
+				
+				if ($('.'+i).val().substring(4,7) == 'Jan') {
+					month = "1월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Feb') {
+					month = "2월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Mar') {
+					month = "3월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Apr') {
+					month = "4월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'May') {
+					month = "5월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Jun') {
+					month = "6월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Jul') {
+					month = "7월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Aug') {
+					month = "8월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Sep') {
+					month = "9월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Oct') {
+					month = "10월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Nov') {
+					month = "11월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Dec') {
+					month = "12월";
+				}
+				
+				$('.'+i).val(month + ' ' + $('.'+i).val().substring(8,10) + '일 ' + day);
+			}
+		}
+		
+		
+		
+		
 		$("#joinRetestday").datepicker({
 			changeMonth: true,
 	    	changeYear: true,

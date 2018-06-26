@@ -141,6 +141,84 @@ public class MainController {
 	}
 	
 	
+	// 아이디, 비밀번호 찾기 페이지 이동
+	@RequestMapping(value="km_idpwSearch")
+	public String idpwSearch(){
+		
+		return "km_main/idpwSearch";
+	}
+	
+	
+	// 아이디 찾기 페이지 이동
+	@RequestMapping(value="km_idSearch")
+	public String idSearch(){
+		
+		return "km_main/idSearch";
+	}
+	
+	
+	// 아이디 확인
+	@RequestMapping(value = "km_idSearchChecked", method = RequestMethod.GET, produces="text/plain;charset=UTF-8")
+	public String idSearchChecked(Locale locale, Model model, MemberVO vo) throws Exception {
+		
+		logger.info("아이디 찾기 확인");
+		
+		MemberVO ok = null;
+		ok= service.idSearchChecked(vo);
+		String result="";	
+		String message="";
+	
+		if(ok!=null){
+			result = "km_main/idSearchChecked";
+			message = "회원님의 아이디는 : "+ok.getMemEmail()+" 입니다.";
+			model.addAttribute("vo",ok);
+		} else {
+			result = "km_main/idSearchChecked";
+			message = "회원님의 정보가 존재하지 않습니다.";
+			
+		}
+		
+		model.addAttribute("message",message);
+		
+		return result;
+	}
+			
+	
+	
+	// 비밀번호 찾기 페이지 이동
+	@RequestMapping(value="km_pwSearch")
+	public String pwSearch(){
+		
+		return "km_main/pwSearch";
+	}
+	
+	
+	// 비밀번호 확인
+	@RequestMapping(value = "km_pwSearchChecked", method = RequestMethod.GET, produces="text/plain;charset=UTF-8")
+	public String pwSearchChecked(Locale locale, Model model, MemberVO vo) throws Exception {
+		
+		logger.info("비밀번호 찾기 확인");
+		
+		MemberVO ok = null;
+		ok= service.pwSearchChecked(vo);
+		String result="";	
+		String message="";
+	
+		if(ok!=null){
+			result = "km_main/pwSearchChecked";
+			message = "회원님의 비밀번호는 : "+ok.getMemPassword()+" 입니다.";
+			model.addAttribute("vo",ok);
+		} else {
+			result = "km_main/pwSearchChecked";
+			message = "회원님의 정보가 존재하지 않습니다.";
+			
+		}
+		
+		model.addAttribute("message",message);
+		
+		return result;
+	}
+	
 	
 	
 }

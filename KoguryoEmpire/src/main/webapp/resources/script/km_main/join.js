@@ -90,6 +90,11 @@ $(function() {
 			alert('비밀번호를 입력하세요');
 			return false;
 		}
+		
+		if($('#memNextpassword').val().length<4){
+			alert('2차 비밀번호를 입력하세요 (4자 이상)');
+			return false;
+		}
 
 		if($('#memName').val().length<1){
 			alert('이름을 입력하세요');
@@ -106,7 +111,7 @@ $(function() {
 			return false;
 		}
 
-
+			
 		$('#joinForm').attr("action","km_joinOk.do");
 		$('#joinForm').attr("method","get");
 		$('#joinForm').submit();

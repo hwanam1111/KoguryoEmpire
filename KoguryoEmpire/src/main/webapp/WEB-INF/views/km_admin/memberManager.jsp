@@ -19,7 +19,7 @@
   	<div class="wrapper">
 	    <div class="sidebar" data-color="purple" data-background-color="white">
 	    	<div class="logo">
-		        <a class="simple-text logo-normal">
+		        <a class="simple-text logo-normal" href="km_main.do">
 		          Koguryo Empire
 		        </a>
 	      	</div>

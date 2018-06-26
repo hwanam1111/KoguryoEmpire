@@ -6,7 +6,7 @@
 		<link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/image/km_common/favicon.ico">
 		<link href="${pageContext.request.contextPath}/resources/css/km_common/bootstrap.min.css" rel="stylesheet" type="text/css">
 		<link href="${pageContext.request.contextPath}/resources/css/km_common/common.css" rel="stylesheet" type="text/css">
-		<link href="${pageContext.request.contextPath}/resources/css/km_main/login.css" rel="stylesheet" type="text/css">
+		<link href="${pageContext.request.contextPath}/resources/css/km_main/pwSearch.css" rel="stylesheet" type="text/css">
 		<script src="${pageContext.request.contextPath}/resources/script/km_common/jquery-3.3.1.min.js" type="text/javascript"></script>
 	</head>
 	<body>
@@ -17,24 +17,27 @@
 		<%} %>
 
 		<div class="container">
-			<h3>로그인</h3>
-			<form action="km_loginChecked.do">
+			<h3>비밀번호 찾기</h3>
+			<form action="km_pwSearchChecked.do">
 				<div class="form-group">
-					<label for="memberEmail">이메일</label>
 					<input type="email" class="form-control" id="memEmail" name="memEmail" placeholder="이메일 입력">
 				</div>
 				<div class="form-group">
-					<label for="memberPW">비밀번호</label>
-					<input type="password" class="form-control" id="memPassword" name="memPassword" placeholder="비밀번호 입력">
+					<input type="text" class="form-control" id="memName" name="memName" placeholder="이름 입력" maxlength="4">
 				</div>
-				<button type="submit" class="btn">로그인</button>
-				<div id="serche">
-					<span id="id_pw_serche"><a href="km_idpwSearch.do">아이디/비밀번호 찾기</a></span>
-					<span id="member_join"><a href="km_join.do">회원가입</a></span>
+				<div class="form-group">
+					<input type="text" class="form-control" id="memNickname" name="memNickname" placeholder="닉네임 입력" maxlength="12">
 				</div>
-				<div class="clear"></div>
+				<div class="form-group">
+					<input type="password" class="form-control" id="memNextpassword" name="memNextpassword" placeholder="2차 비밀번호 입력" maxlength="15">
+				</div>
+				<button type="submit" class="btn" id="submitBtn">아이디 찾기</button>
+				<div class="clear"></div> 
 				<h6>Copyright &copy; 2018 KoguryoEmpire All rights reserved.</h6>
 			</form>
 		</div>
 	</body>
+	<script>
+	
+	</script>
 </html> 

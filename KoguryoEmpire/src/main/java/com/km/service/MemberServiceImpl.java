@@ -45,5 +45,23 @@ public class MemberServiceImpl implements MemberService {
 		
 		return result;
 	}
+
+
+	@Override
+	public MemberVO idSearchChecked(MemberVO vo) throws Exception {
+
+		MemberVO result = dao.idSearchChecked(vo);
+		
+		return result;
+	}
+
+
+	@Override
+	public MemberVO pwSearchChecked(MemberVO vo) throws Exception {
+		
+		MemberVO result = dao.pwSearchChecked(vo);
+		
+		return result;
+	}
  
 }

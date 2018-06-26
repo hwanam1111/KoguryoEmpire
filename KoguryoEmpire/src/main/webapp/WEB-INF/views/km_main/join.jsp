@@ -9,7 +9,7 @@
 		<link href="${pageContext.request.contextPath}/resources/css/km_main/join.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 		<script src="${pageContext.request.contextPath}/resources/script/km_common/jquery-3.3.1.min.js" type="text/javascript"></script>
-		<script src="${pageContext.request.contextPath}/resources/script/km_main/join.js" type="text/javascript"></script>
+		<script src="${pageContext.request.contextPath}/resources/script/km_main/join.js?ver=1" type="text/javascript"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	</head>
 	<body>
@@ -30,6 +30,9 @@
 				</div>
 				<div class="form-group">
 					<input type="password" class="form-control" id="memPasswordCheck" name="memPasswordCheck" placeholder="비밀번호 확인" maxlength="15">
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control" id="memNextpassword" name="memNextpassword" placeholder="2차 비밀번호 입력 (ID찾을때만 사용)" maxlength="15">
 				</div>
 				<div class="form-group">
 					<input type="text" class="form-control" id="memName" name="memName" placeholder="이름 입력" maxlength="4">

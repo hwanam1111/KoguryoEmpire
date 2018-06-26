@@ -12,9 +12,18 @@ public class MemberVO {
 	private String memIp;
 	private String memClass;
 	private Date memDate;
+	private String memNextpassword;
 	
 	
 	
+	
+	
+	public String getMemNextpassword() {
+		return memNextpassword;
+	}
+	public void setMemNextpassword(String memNextpassword) {
+		this.memNextpassword = memNextpassword;
+	}
 	public String getMemEmail() {
 		return memEmail;
 	}

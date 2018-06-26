@@ -6,11 +6,11 @@
 <mapper namespace="com.km.mapper.joinMapper">
 
  	<insert id="guildJoin" parameterType="joinVO" useGeneratedKeys="true" keyProperty="joinNum">
-    	INSERT INTO GUILD_JOIN(joinName, joinNickname, joinAge, joinSex, joinRecommend, joinLastguild, joinIp, joinDate, joinStatus, joinRetestdat) VALUES(#{joinName}, #{joinNickname}, #{joinAge}, #{joinSex}, #{joinRecommend}, #{joinLastguild}, #{joinIp}, curdate(), #{joinStatus}, #{joinRetestdat});
+    	INSERT INTO GUILD_JOIN(joinName, joinNickname, joinAge, joinSex, joinRecommend, joinLastguild, joinIp, joinDate, joinStatus) VALUES(#{joinName}, #{joinNickname}, #{joinAge}, #{joinSex}, #{joinRecommend}, #{joinLastguild}, #{joinIp}, now(), #{joinStatus});
     </insert>
     
     <select id="joinList" resultType="joinVO">
-        SELECT * FROM GUILD_JOIN;
+        SELECT JOINNUM, JOINNAME, JOINNICKNAME, JOINAGE, JOINSEX, JOINRECOMMEND, JOINLASTGUILD, JOINIP, JOINSTATUS, JOINRETESTDAY, JOINDATE FROM GUILD_JOIN ORDER BY JOINNUM DESC
     </select>
 
 </mapper>

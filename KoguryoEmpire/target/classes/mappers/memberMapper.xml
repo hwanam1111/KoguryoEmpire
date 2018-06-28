@@ -10,23 +10,23 @@
     </select>
     
     <insert id="insertMember" parameterType="memberVO">
-    	INSERT INTO member(memEmail, memPassword, memName, memNickname, memBirthday, memIp, memClass, memDate, memNextpassword) VALUES(#{memEmail}, #{memPassword}, #{memName}, #{memNickname}, #{memBirthday}, #{memIp}, "손님", curdate(), #{memNextpassword});
+    	INSERT INTO MEMBER(memEmail, memPassword, memName, memNickname, memBirthday, memIp, memClass, memDate, memNextpassword) VALUES(#{memEmail}, #{memPassword}, #{memName}, #{memNickname}, #{memBirthday}, #{memIp}, "손님", curdate(), #{memNextpassword});
     </insert>
     
     <select id="idChecked" parameterType="memberVO" resultType="memberVO"> 
-		select * from member where memEmail=#{memEmail}
+		select * from MEMBER where memEmail=#{memEmail}
 	</select>
 	
 	<select id="loginChecked" parameterType="memberVO" resultType="memberVO"> 
-		select * from member where memEmail=#{memEmail} AND memPassword=#{memPassword}
+		select * from MEMBER where memEmail=#{memEmail} AND memPassword=#{memPassword}
 	</select>
 	
 	<select id="idSearchChecked" parameterType="memberVO" resultType="memberVO"> 
-		select * from member where memName=#{memName} AND memNickname=#{memNickname} AND memNextpassword=#{memNextpassword} 
+		select * from MEMBER where memName=#{memName} AND memNickname=#{memNickname} AND memNextpassword=#{memNextpassword} 
 	</select>
 	
 	<select id="pwSearchChecked" parameterType="memberVO" resultType="memberVO"> 
-		select * from member where memEmail=#{memEmail} AND memName=#{memName} AND memNickname=#{memNickname} AND memNextpassword=#{memNextpassword} 
+		select * from MEMBER where memEmail=#{memEmail} AND memName=#{memName} AND memNickname=#{memNickname} AND memNextpassword=#{memNextpassword} 
 	</select>
 	
 </mapper>

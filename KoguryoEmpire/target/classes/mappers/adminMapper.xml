@@ -7,7 +7,7 @@
  	
 
 	<update id="classUpdate" parameterType="memberVO">
-		UPDATE member SET memClass=#{memClass} WHERE memEmail=#{memEmail}
+		UPDATE MEMBER SET memClass=#{memClass} WHERE memEmail=#{memEmail}
 	</update>
 	
 	

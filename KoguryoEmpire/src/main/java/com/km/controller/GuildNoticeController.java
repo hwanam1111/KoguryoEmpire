@@ -12,14 +12,14 @@ public class GuildNoticeController {
 	
 	@RequestMapping("km_noticeList")
 	public String memberNotice(HttpServletRequest request, HttpServletResponse response) {
-		try {
-            if(request.getSession().getAttribute("login") == null ){
-            	
-            	return "km_common/returnMessage";
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//		try {
+//            if(request.getSession().getAttribute("login") == null ){
+//            	
+//            	return "km_common/returnMessage";
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
 		return "km_member/list/memberNotice";
 	}

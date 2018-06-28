@@ -32,11 +32,11 @@ public class MainController {
 	@RequestMapping(value = "km_main", method = RequestMethod.GET, produces="text/plain;charset=UTF-8")
     public String main(Locale locale, Model model) throws Exception{
 		
-        logger.info("메인페이지");
-        
-        List<MemberVO> memberList = service.selectMember();
-        
-        model.addAttribute("memberList", memberList);
+//        logger.info("메인페이지");
+//        
+//        List<MemberVO> memberList = service.selectMember();
+//        
+//        model.addAttribute("memberList", memberList);
  
         return "km_main/main";
     }

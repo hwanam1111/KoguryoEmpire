@@ -18,32 +18,32 @@
 		<div class="container">
 			<table class="table table-striped">
 				<tr>
-					<td>고구려마스터</td>
-					<td>K。운영진</td>
+					<td>${map.noticeTitle}</td>
+					<td>${map.noticeNickname}</td>
 					<td>http://koguryoempire.com/KoguryoEmpire/km_noticeView.do/1</td>
 					<td><button>url복사</button></td>
 				</tr>
 			</table>
 			<div class="content">
-				Views 테스트
+				${map.noticeContent}
 			</div>
 			<div class="reply">
-				<div>
-					<p>고구려테스트</p>
-					<p>댓글 1</p>
-					<hr>
-					<p>고구려테스트</p>
-					<p>댓글 2</p>
-					<hr>
-				</div>
+<!-- 				<div> -->
+<!-- 					<p>고구려테스트</p> -->
+<!-- 					<p>댓글 1</p> -->
+<!-- 					<hr> -->
+<!-- 					<p>고구려테스트</p> -->
+<!-- 					<p>댓글 2</p> -->
+<!-- 					<hr> -->
+<!-- 				</div> -->
 				<form>
-					<div class="form-group">
-						<input type="text" class="form-control" id="noticeReply" name="noticeReply" placeholder="댓글 입력">
-						<button type="submit" class="btn btn-primary">등록</button>
-					</div>
-					<div class="form-group">
+<!-- 					<div class="form-group"> -->
+<!-- 						<input type="text" class="form-control" id="noticeReply" name="noticeReply" placeholder="댓글 입력"> -->
+<!-- 						<button type="submit" class="btn btn-primary">등록</button> -->
+<!-- 					</div> -->
+<!-- 					<div class="form-group"> -->
 						
-					</div>
+<!-- 					</div> -->
 				</form>
 			</div>
 		</div>

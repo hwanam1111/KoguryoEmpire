@@ -1,4 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="com.km.dto.MemberVO"%>
+<%
+	Object obj = session.getAttribute("login");
+	MemberVO mvo = (MemberVO)obj;
+%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -26,16 +31,18 @@
 			<jsp:include page="/WEB-INF/views/km_common/afterHeader.jsp"/>
 		<%} %>
 		<div id="content">
-			<form action=""> <!--  onsubmit="alert('Your submitted HTML was:\n\n' + document.getElementById('noise').value); return false;" -->
+			<form action="km_noticeWriteOk.do"> <!--  onsubmit="alert('Your submitted HTML was:\n\n' + document.getElementById('noise').value); return false;" -->
 				<div class="form-group">
 					<input type="text" class="form-control" id="noticeTitle" name="noticeTitle" placeholder="제목 입력">
 				</div>
 				<fieldset>
 					<textarea id="noise" name="noticeContent" class="widgEditor nothing"></textarea>
 				</fieldset>
+				<input type="hidden" value="${sessionScope.login.memNickname}" name="noticeNickname">
 				<fieldset class="submit">
 					<button type="submit" class="btn">확인</button>
 				</fieldset>
+				
 			</form>
 		</div>
 	</body>

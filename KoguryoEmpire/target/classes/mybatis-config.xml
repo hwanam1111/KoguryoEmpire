@@ -7,6 +7,7 @@
     	<typeAliases>
             <typeAlias type="com.km.dto.MemberVO" alias="memberVO"/>
             <typeAlias type="com.km.dto.JoinVO" alias="joinVO"/>
+            <typeAlias type="com.km.dto.GuildNoticeVO" alias="guildnoticeVO"/>
         </typeAliases>
 
 

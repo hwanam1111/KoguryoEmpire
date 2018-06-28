@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.km.mapper.guildmemberMapper">
+ 	
+    <insert id="insertNotice" parameterType="guildnoticeVO" useGeneratedKeys="true" keyProperty="noticeNum">
+    	INSERT INTO MEMBER_NOTICE(noticeTitle, noticeNickname, noticeContent, noticeWritedate) VALUES(#{noticeTitle}, #{noticeNickname}, #{noticeContent}, curdate());
+    </insert>
+    
+    <select id="selectNotice" resultType="guildnoticeVO">
+        SELECT * FROM MEMBER_NOTICE;
+    </select>
+    
+    <select id="noticeView" parameterType="hashmap" resultType="guildnoticeVO"> 
+		select * from MEMBER_NOTICE where noticeNum=#{noticeNum}
+	</select>
+    
+	
+</mapper>

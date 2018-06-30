@@ -15,21 +15,12 @@
 }
 
 .table tr>td:NTH-CHILD(1) {
-	width: 30%;
+	width: 60%;
 }
 
 .table tr>td:NTH-CHILD(2) {
-	width: 10%;
+	width: 40%;
 	text-align: right;
-}
-
-.table tr>td:NTH-CHILD(3) {
-	width: 50%;
-	text-align: right;
-}
-
-.table>tr>td:NTH-CHILD(4) {
-	width: 10%;
 }
 
 .content {

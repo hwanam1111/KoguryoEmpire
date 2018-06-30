@@ -28,9 +28,10 @@
 		</section>
 <!-- 		<div class="clear"></div> -->
 		<section id="main_contents_2">
-			
-
-
+			<br/><br/>
+			<h3 style="text-align: center">홈페이지 아직 작업중입니다. 회원가입, 길드 가입신청은 가능합니다.</h3> 
+			<br/><br/>
+			<h4 style="text-align: center">궁금하신점은 넥플 고구려김이준 메신주세요.</h4> 
 		</section>
 	</body>
 </html> 

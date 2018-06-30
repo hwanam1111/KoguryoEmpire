@@ -36,6 +36,26 @@ public class GuildNoticeServiceImpl implements GuildNoticeService {
 		
 		return dao.noticeView(hashmap);
 	}
+	
+
+	@Override
+	public GuildNoticeVO noticeDelete(HashMap hashmap) throws Exception {
+
+		return dao.noticeDelete(hashmap);
+	}
+
+	
+	@Override
+	public GuildNoticeVO noticeUpdateForm(GuildNoticeVO nvo) throws Exception {
+
+		return dao.noticeUpdateForm(nvo);
+	}
+
+	@Override
+	public int noticeUpdate(GuildNoticeVO nvo) throws Exception {
+
+		return dao.noticeUpdate(nvo);
+	}
 
     
 }

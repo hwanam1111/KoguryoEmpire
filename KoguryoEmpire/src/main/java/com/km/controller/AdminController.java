@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Locale;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,7 +43,17 @@ public class AdminController {
 	
 	// 어드민 메인페이지 이동
 	@RequestMapping(value = "km_adminPage")
-	public String adminMain() throws Exception {
+	public String adminMain(HttpServletRequest request, HttpServletResponse response, MemberVO mvo) throws Exception {
+
+		try {
+            if(request.getSession().getAttribute("login") == null){
+            	
+            	return "km_common/returnMessage";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+		
 		logger.info("어드민 메인 페이지");
 		
 		return "km_admin/adminMain";

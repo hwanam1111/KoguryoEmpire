@@ -13,6 +13,7 @@
 	<resources mapping="/script/**" location="/script/" />
 	<resources mapping="/img/**" location="/img/" />
 	<resources mapping="/uploadfile/**" location="/uploadfile/" />
+	<resources mapping="/ckeditor/**" location="/ckeditor/" />
 
 
 	<beans:bean

@@ -36,6 +36,16 @@
 				</div>
 			</div>
 			<div style="clear:both"></div>
+			<input type="hidden" id="memEmail" value="${sessionScope.login.memNickname }">
 		</div>
 	</body>
+	<script type="text/javascript">
+		$(function() {
+			if($('#memEmail').val() != 'admin@koguryoempire.com') {
+				alert("관리자가 아닙니다.");
+				
+				location.href="km_main.do";
+			}
+		})
+	</script>
 </html> 

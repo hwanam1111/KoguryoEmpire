@@ -20,9 +20,23 @@
 		<link href="${pageContext.request.contextPath}/resources/css/km_member/write/noticeWrite.css" rel="stylesheet" type="text/css">
 		<link href="${pageContext.request.contextPath}/resources/css/km_common/info.css" rel="stylesheet" type="text/css">
 		<link href="${pageContext.request.contextPath}/resources/css/km_common/main.css" rel="stylesheet" type="text/css">
-		<link href="${pageContext.request.contextPath}/resources/css/km_common/widgEditor.css" rel="stylesheet" type="text/css">
 		<script src="${pageContext.request.contextPath}/resources/script/km_common/jquery-3.3.1.min.js" type="text/javascript"></script>
-		<script src="${pageContext.request.contextPath}/resources/script/km_common/widgEditor.js" type="text/javascript"></script>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/ckeditor/ckeditor.js"></script>
+		<script>
+			$(function() {
+				
+				$('#submitBtn').click(function() {
+					var data = CKEDITOR.instances.contents.getData();
+					
+					$('#noticeContent').val(data);
+					
+					$('#noticeWriteOk').attr("action", "km_noticeWriteOk.do");
+ 					$('#noticeWriteOk').submit();
+				})
+				
+			})
+			
+		</script>
 	</head>
 	<body>
 		<%if(session.getAttribute("login") == null) { %>
@@ -31,16 +45,17 @@
 			<jsp:include page="/WEB-INF/views/km_common/afterHeader.jsp"/>
 		<%} %>
 		<div id="content">
-			<form action="km_noticeWriteOk.do"> <!--  onsubmit="alert('Your submitted HTML was:\n\n' + document.getElementById('noise').value); return false;" -->
+			<form id="noticeWriteOk"> <!--  action="km_noticeWriteOk.do"-->
 				<div class="form-group">
 					<input type="text" class="form-control" id="noticeTitle" name="noticeTitle" placeholder="제목 입력">
 				</div>
-				<fieldset>
-					<textarea id="noise" name="noticeContent" class="widgEditor nothing"></textarea>
-				</fieldset>
-				<input type="hidden" value="${sessionScope.login.memNickname}" name="noticeNickname">
+				
+				<textarea name="contents" id="contents" rows="50" cols="10" class="ckeditor"></textarea>
+				
+				<input type="text" name="noticeContent" id="noticeContent">
+				<input type="text" value="${sessionScope.login.memNickname}" name="noticeNickname">
 				<fieldset class="submit">
-					<button type="submit" class="btn">확인</button>
+					<button type="button" class="btn" id="submitBtn"">확인</button>
 				</fieldset>
 				
 			</form>

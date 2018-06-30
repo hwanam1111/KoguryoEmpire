@@ -28,6 +28,7 @@ public class MainController {
 	@Inject
     private MemberService service;
 	
+	
 	// 메인 페이지
 	@RequestMapping(value = "km_main", method = RequestMethod.GET, produces="text/plain;charset=UTF-8")
     public String main(Locale locale, Model model) throws Exception{

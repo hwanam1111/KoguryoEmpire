@@ -22,7 +22,8 @@ public class GuildMemberPhotoController {
             e.printStackTrace();
         }
 		
-		return "km_member/list/memberPhoto";
+		return "km_common/readyMessage";
+//		return "km_member/list/memberPhoto";
 	}
 	
 	

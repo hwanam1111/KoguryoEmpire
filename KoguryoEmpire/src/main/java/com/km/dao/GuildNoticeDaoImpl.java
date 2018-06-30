@@ -42,5 +42,26 @@ public class GuildNoticeDaoImpl implements GuildNoticeDao{
 		
 		return sqlSession.selectOne(Namespace+".noticeView", hashmap);
 	}
+
+
+	@Override
+	public GuildNoticeVO noticeDelete(HashMap hashmap) throws Exception {
+
+		return sqlSession.selectOne(Namespace+".noticeDelete", hashmap);
+	}
+
+
+	@Override
+	public GuildNoticeVO noticeUpdateForm(GuildNoticeVO nvo) throws Exception {
+
+		return sqlSession.selectOne(Namespace+".noticeUpdateForm", nvo);
+	}
+
+
+	@Override
+	public int noticeUpdate(GuildNoticeVO nvo) throws Exception {
+
+		return sqlSession.update(Namespace+".noticeUpdate", nvo);
+	}
     
 }

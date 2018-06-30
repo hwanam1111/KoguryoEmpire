@@ -13,6 +13,12 @@ public interface GuildNoticeService {
 
 	public GuildNoticeVO noticeView(HashMap hashmap) throws Exception;
 
+	public GuildNoticeVO noticeDelete(HashMap hashmap) throws Exception;
+
+	public GuildNoticeVO noticeUpdateForm(GuildNoticeVO nvo) throws Exception;
+
+	public int noticeUpdate(GuildNoticeVO nvo) throws Exception;
+
 	
 }
 

@@ -22,7 +22,8 @@ public class GuildInfoController {
             e.printStackTrace();
         }
 		
-		return "km_member/list/memberInfo";
+		return "km_common/readyMessage";
+//		return "km_member/list/memberInfo";
 	}
 	
 	

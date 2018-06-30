@@ -191,7 +191,7 @@
 		$("#joinRetestday").datepicker({
 			changeMonth: true,
 	    	changeYear: true,
-	    	yearRange: "1970:2002",
+	    	yearRange: "2018:2020",
 	    	dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
 	    	monthNamesShort: ["1Mon", "2Mon", "3Mon", "4Mon", "5Mon", "6Mon", "7Mon", "8Mon", "9Mon", "10Mon", "11Mon", "12Mon"]
 	    });

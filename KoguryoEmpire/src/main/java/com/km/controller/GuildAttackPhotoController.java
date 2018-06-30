@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class GuildAttackPhotoController {
 	
 	
-	@RequestMapping("km_attackPhoto")
+	@RequestMapping("km_atPhotoList")
 	public String attackPhoto(HttpServletRequest request, HttpServletResponse response) {
 		try {
             if(request.getSession().getAttribute("login") == null ){
@@ -22,7 +22,8 @@ public class GuildAttackPhotoController {
             e.printStackTrace();
         }
 		
-		return "km_member/list/attackPhoto";
+		return "km_common/readyMessage";
+//		return "km_member/list/attackPhoto";
 	}
 	
 	

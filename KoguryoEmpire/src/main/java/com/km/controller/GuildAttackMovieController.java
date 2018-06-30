@@ -12,16 +12,9 @@ public class GuildAttackMovieController {
 	
 	@RequestMapping("km_atMovieList")
 	public String attackMovie(HttpServletRequest request, HttpServletResponse response) {
-		try {
-            if(request.getSession().getAttribute("login") == null ){
-            	
-            	return "km_common/returnMessage";
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 		
-		return "km_member/list/attackMovie";
+		return "km_common/readyMessage";
+//		return "km_member/list/attackMovie";
 	}
 	
 	

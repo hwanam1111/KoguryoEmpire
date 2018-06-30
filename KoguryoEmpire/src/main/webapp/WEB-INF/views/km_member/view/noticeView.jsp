@@ -1,4 +1,10 @@
+<%@page import="org.springframework.web.context.annotation.SessionScope"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="com.km.dto.*"%>
+<%
+	Object obj = session.getAttribute("login");
+	MemberVO mvo = (MemberVO)obj;
+%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -18,34 +24,29 @@
 		<div class="container">
 			<table class="table table-striped">
 				<tr>
-					<td>${map.noticeTitle}</td>
-					<td>${map.noticeNickname}</td>
-					<td>http://koguryoempire.com/KoguryoEmpire/km_noticeView.do/1</td>
-					<td><button>url복사</button></td>
+					<td>제목 : ${map.noticeTitle}</td>
+					<td>작성자 : ${map.noticeNickname}</td>
 				</tr>
 			</table>
 			<div class="content">
 				${map.noticeContent}
 			</div>
-			<div class="reply">
-<!-- 				<div> -->
-<!-- 					<p>고구려테스트</p> -->
-<!-- 					<p>댓글 1</p> -->
-<!-- 					<hr> -->
-<!-- 					<p>고구려테스트</p> -->
-<!-- 					<p>댓글 2</p> -->
-<!-- 					<hr> -->
-<!-- 				</div> -->
-				<form>
-<!-- 					<div class="form-group"> -->
-<!-- 						<input type="text" class="form-control" id="noticeReply" name="noticeReply" placeholder="댓글 입력"> -->
-<!-- 						<button type="submit" class="btn btn-primary">등록</button> -->
-<!-- 					</div> -->
-<!-- 					<div class="form-group"> -->
-						
-<!-- 					</div> -->
-				</form>
+			<div style="float:right; display:none;" id="buttonDiv">
+				<a href="km_noticeUpdateForm.do?noticeNum=${map.noticeNum}"><button>수정하기</button></a>
+				<a href="km_noticeDelete.do?noticeNum=${map.noticeNum}"><button>삭제하기</button></a>
 			</div>
 		</div>
+		<input type="hidden" value="${sessionScope.login.memNickname }" id="sessionNickname">
+		<input type="hidden" value="${map.noticeNickname}" id="noticeNickname">
 	</body>
+	<script type="text/javascript">
+		$(function() {
+			var sessionNickname = $('#sessionNickname').val();
+			var noticeNickname = $('#noticeNickname').val();
+			 
+			if (sessionNickname == noticeNickname) {
+				$('#buttonDiv').css('display', 'block');
+			}
+		})
+	</script>
 </html> 

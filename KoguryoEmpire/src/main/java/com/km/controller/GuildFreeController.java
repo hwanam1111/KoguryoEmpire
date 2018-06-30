@@ -23,7 +23,8 @@ public class GuildFreeController {
             e.printStackTrace();
         }
 		
-		return "km_member/list/memberFree";
+		return "km_common/readyMessage";
+//		return "km_member/list/memberFree";
 	}
 	
 	

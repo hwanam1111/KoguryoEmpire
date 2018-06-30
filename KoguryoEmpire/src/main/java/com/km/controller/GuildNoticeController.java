@@ -29,14 +29,14 @@ public class GuildNoticeController {
 	
 	@RequestMapping(value = "km_noticeList", method = RequestMethod.GET, produces="text/plain;charset=UTF-8")
 	public String memberNotice(Locale locale, Model model, HttpServletRequest request, HttpServletResponse response) throws Exception {
-//		try {
-//            if(request.getSession().getAttribute("login") == null ){
-//            	
-//            	return "km_common/returnMessage";
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+		try {
+            if(request.getSession().getAttribute("login") == null ){
+            	
+            	return "km_common/returnMessage";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 		
       logger.info("공지사항 리스트");
       
@@ -52,7 +52,7 @@ public class GuildNoticeController {
 	
 	//	공지사항 뷰 이동
 	@RequestMapping(value="km_noticeView")
-	public String noticeView(String noticeNum, Model m) throws Exception{
+	public String noticeView(String noticeNum, Model model) throws Exception{
 
 		logger.info("공지사항 뷰");
 		
@@ -62,9 +62,9 @@ public class GuildNoticeController {
 		GuildNoticeVO noticeView = service.noticeView(hashmap);
 		
 		if(noticeView!=null){
-			m.addAttribute("map", noticeView);
+			model.addAttribute("map", noticeView);
 		} else {
-			m.addAttribute("map", "null");
+			model.addAttribute("map", "null");
 		}
 		
 		return "km_member/view/noticeView";
@@ -83,7 +83,7 @@ public class GuildNoticeController {
 	}
 	
 	
-	// 회원가입 처리 부분
+	// 글쓰기 완료
 	@RequestMapping(value = "km_noticeWriteOk", method = RequestMethod.GET, produces="text/plain;charset=UTF-8")
 	public String joinOk(Locale locale, Model model, GuildNoticeVO vo) throws Exception {
 		
@@ -102,6 +102,66 @@ public class GuildNoticeController {
 		model.addAttribute("vo", vo);
 		
 		return "km_member/write/noticeWriteOk";
+	}
+	
+	
+	
+	//	글삭제
+	@RequestMapping(value="km_noticeDelete")
+	public String noticeFormDelete(String noticeNum, Model model) throws Exception{
+		
+		logger.info("글 삭제");
+		System.out.println("글삭제 : " + noticeNum);
+		
+		HashMap hashmap = new HashMap();
+		hashmap.put("noticeNum", noticeNum);
+		
+		GuildNoticeVO noticeDelete = service.noticeDelete(hashmap);
+		
+		if(noticeDelete == null){
+			model.addAttribute("state", "yes");
+			model.addAttribute("message", "성공");
+		} else {
+			model.addAttribute("state", "no");
+			model.addAttribute("message", "실패");
+		}
+		
+		
+		return "km_member/write/noticeDeleteOk";
+	}
+	
+	
+	//	글 수정 폼
+	@RequestMapping(value="km_noticeUpdateForm")
+	public String noticeFormUpdate(GuildNoticeVO nvo, Model model) throws Exception{
+		
+		GuildNoticeVO noticeUpdateForm = service.noticeUpdateForm(nvo);
+		
+		model.addAttribute("noticeUpdateForm", noticeUpdateForm);
+		
+		return "km_member/write/noticeUpdateForm";
+	}
+	
+	
+	// 글 수정 완료
+	@RequestMapping(value="km_noticeUpdateFormOk")
+	public String noticeUpdate(GuildNoticeVO nvo, Model model) throws Exception{
+		
+		int resultCnt = service.noticeUpdate(nvo);
+		String result = "";
+		
+		
+		if(resultCnt == 1) {
+			result = "글 수정 성공";
+		}else{
+			result = "글 수정 실패";
+		}
+		
+		model.addAttribute("result", result);
+		model.addAttribute("nvo", nvo);
+		
+		
+		return "km_member/write/noticeUpdateOk";
 	}
 	
 	

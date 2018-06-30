@@ -44,11 +44,11 @@
 					<li><a href="km_infoList.do">길원정보</a></li>
 					<li><a href="https://docs.google.com/spreadsheets/d/1rVt-IFxG5fOd7CtkL-2QvxmHwAjjVxRngZVxBP5yHVM/edit#gid=0">추천현황</a></li>
 					<li><a href="km_freeList.do">자유수다</a></li>
-					<li><a href="km_atMovieList.do">어택영상</a></li>
 					<li><a href="km_atPhotoList.do">어택스샷</a></li>
 					<li><a href="km_mbPhotoList.do">정모사진</a></li>
 				</ul>
 			</li>
+			<li><a href="km_atMovieList.do">어택영상</a></li>
 			<!-- 게스트는 나중에 보안문제 해결되면 처리 <li>
 				게스트
 				<ul>

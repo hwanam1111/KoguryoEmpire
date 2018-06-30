@@ -10,12 +10,26 @@
     </insert>
     
     <select id="selectNotice" resultType="guildnoticeVO">
-        SELECT * FROM MEMBER_NOTICE;
+        SELECT * FROM MEMBER_NOTICE ORDER BY NOTICENUM DESC; 
     </select>
     
     <select id="noticeView" parameterType="hashmap" resultType="guildnoticeVO"> 
 		select * from MEMBER_NOTICE where noticeNum=#{noticeNum}
 	</select>
+	
+	<delete id="noticeDelete" parameterType="hashmap">
+		DELETE FROM MEMBER_NOTICE where noticenum=#{noticeNum}
+	</delete>
+	
+	<select id="noticeUpdateForm" parameterType="guildnoticeVO" resultType="guildnoticeVO">
+		select * from MEMBER_NOTICE where noticeNum=#{noticeNum}
+	</select>
+	
+	<update id="noticeUpdate" parameterType="guildnoticeVO">
+		UPDATE MEMBER_NOTICE SET noticeTitle=#{noticeTitle}, noticeContent=#{noticeContent} WHERE noticeNum=#{noticeNum}
+	</update>
+	
+	
     
 	
 </mapper>

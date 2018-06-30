@@ -23,19 +23,94 @@
 					<td>Title.</td>
 					<td>Writer.</td>
 					<td>Date.</td>
-					<td>View.</td>
+<!-- 					<td>View.</td> -->
 				</tr>
 				<c:forEach items="${selectNotice}" var="selectNotice">
+					<input type="hidden" id="lastNum" value="${selectNotice.noticeNum}">
 					<tr>
 						<td>${selectNotice.noticeNum}</td>
 						<td><a href="km_noticeView.do?noticeNum=${selectNotice.noticeNum}">${selectNotice.noticeTitle}</a></td>
 						<td>${selectNotice.noticeNickname}</td>
-						<td>${selectNotice.noticeWritedate}</td>
-						<td>50</td>
+						<td><input type="text" value="${selectNotice.noticeWritedate}" class="${selectNotice.noticeNum}" style="border:none;" readonly="readonly"></td>
+<!-- 						<td>50</td> -->
 					</tr>
 				</c:forEach>
 			</table>
 			<a href="km_noticeWrite.do"><button class="btn">글쓰기</button></a>
 		</div>
 	</body>
+	<script>
+	$(function() {
+		var month = "";
+		var day = "";
+		
+		for (var i=1; i<=parseInt($('#lastNum').val()); i++) {
+			if ($('.'+i).val() != undefined && $('.'+i).val().length > 15) {
+
+				if ($('.'+i).val().substring(0,3) == 'Mon') {
+					day = "월요일";
+				}
+				else if ($('.'+i).val().substring(0,3) == 'Tue') {
+					day = "화요일";
+				}
+				else if ($('.'+i).val().substring(0,3) == 'Wed') {
+					day = "수요일";
+				}
+				else if ($('.'+i).val().substring(0,3) == 'Thu') {
+					day = "목요일";
+				}
+				else if ($('.'+i).val().substring(0,3) == 'Fri') {
+					day = "금요일";
+				}
+				else if ($('.'+i).val().substring(0,3) == 'Sat') {
+					day = "토요일";
+				}
+				else if ($('.'+i).val().substring(0,3) == 'Sun') {
+					day = "일요일";
+				}
+				
+				
+				if ($('.'+i).val().substring(4,7) == 'Jan') {
+					month = "1월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Feb') {
+					month = "2월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Mar') {
+					month = "3월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Apr') {
+					month = "4월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'May') {
+					month = "5월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Jun') {
+					month = "6월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Jul') {
+					month = "7월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Aug') {
+					month = "8월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Sep') {
+					month = "9월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Oct') {
+					month = "10월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Nov') {
+					month = "11월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Dec') {
+					month = "12월";
+				}
+				
+				$('.'+i).val(month + ' ' + $('.'+i).val().substring(8,10) + '일 ' + day);
+			}
+		}
+		
+	} );
+	</script>
 </html> 

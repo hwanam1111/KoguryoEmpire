@@ -36,12 +36,12 @@
 				</div>
 			</div>
 			<div style="clear:both"></div>
-			<input type="hidden" id="memEmail" value="${sessionScope.login.memNickname }">
+			<input type="hidden" id="memClass" value="${sessionScope.login.memClass }">
 		</div>
 	</body>
 	<script type="text/javascript">
 		$(function() {
-			if($('#memEmail').val() != 'admin@koguryoempire.com') {
+			if($('#memClass').val() != '관리자') {
 				alert("관리자가 아닙니다.");
 				
 				location.href="km_main.do";

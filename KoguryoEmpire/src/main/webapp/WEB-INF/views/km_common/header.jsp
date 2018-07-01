@@ -12,7 +12,7 @@
 				길드맴버
 				<ul>
 					<li><a href="km_noticeList.do">공지사항</a></li>
-					<li><a href="km_infoList.do">길원정보</a></li>
+					<li><a href="km_infoList.do">자기소개</a></li>
 					<li><a href="km_freeList.do">자유수다</a></li>
 					<li><a href="km_atPhotoList.do">어택스샷</a></li>
 					<li><a href="km_mbPhotoList.do">정모사진</a></li>
@@ -30,7 +30,7 @@
 				가입공지
 				<ul>
 					<li><a href="km_joinNotice.do">가입공지</a></li>
-					<li><a href="km_joinTest.do">테스트표</a></li>
+<!-- 					<li><a href="km_joinTest.do">테스트표</a></li> -->
 					<li><a onclick="joinCheck();">가입신청</a></li>
 				</ul>
 			</li>

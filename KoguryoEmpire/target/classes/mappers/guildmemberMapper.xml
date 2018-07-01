@@ -30,6 +30,30 @@
 	</update>
 	
 	
+	
+	<insert id="insertInfo" parameterType="guildinfoVO" useGeneratedKeys="true" keyProperty="infoNum">
+    	INSERT INTO MEMBER_INFO(infoTel, infoName, infoNickname, infoAge, infoSex, infoRecommend, infoLastguild, infoWritedate) VALUES(#{infoTel}, #{infoName}, #{infoNickname}, #{infoAge}, #{infoSex}, #{infoRecommend}, #{infoLastguild}, now());
+    </insert>
+    
+    <select id="infoView" parameterType="hashmap" resultType="guildinfoVO"> 
+		select * from MEMBER_INFO where infoNum=#{infoNum}
+	</select>
+	
+	<select id="selectInfo" resultType="guildinfoVO">
+        SELECT * FROM MEMBER_INFO ORDER BY INFONUM DESC; 
+    </select>
+	
+	<select id="infoUpdateForm" parameterType="guildinfoVO" resultType="guildinfoVO">
+		select * from MEMBER_INFO where infoNum=#{infoNum}
+	</select>
+	
+	<update id="infoUpdate" parameterType="guildinfoVO">
+		UPDATE MEMBER_INFO SET infoNickname=#{infoNickname}, infoAge=#{infoAge}, infoSex=#{infoSex}, infoTel=#{infoTel}, infoRecommend=#{infoRecommend}, infoLastguild=#{infoLastguild} WHERE infoNum=#{infoNum}
+	</update>
+	
+	<delete id="infoDelete" parameterType="hashmap">
+		DELETE FROM MEMBER_INFO where infonum=#{infoNum}
+	</delete>
     
 	
 </mapper>

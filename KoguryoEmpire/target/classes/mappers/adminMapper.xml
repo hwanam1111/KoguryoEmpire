@@ -12,7 +12,7 @@
 	
 	
 	<update id="testUpdate" parameterType="joinVO">
-		UPDATE GUILD_JOIN SET joinStatus=#{joinStatus}, joinRetestday=#{joinRetestday} WHERE joinNum=#{joinNum}
+		UPDATE GUILD_JOIN SET joinStatus=#{joinStatus}, joinRetestday=#{joinRetestday} WHERE joinNum=#{joinNum} 
 	</update>
 	
 </mapper>

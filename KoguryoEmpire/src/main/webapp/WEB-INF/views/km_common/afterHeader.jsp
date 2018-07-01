@@ -41,7 +41,7 @@
 				길드맴버
 				<ul>
 					<li><a href="km_noticeList.do">공지사항</a></li>
-					<li><a href="km_infoList.do">길원정보</a></li>
+					<li><a href="km_infoList.do">자개소개</a></li>
 					<li><a href="https://docs.google.com/spreadsheets/d/1rVt-IFxG5fOd7CtkL-2QvxmHwAjjVxRngZVxBP5yHVM/edit#gid=0">추천현황</a></li>
 					<li><a href="km_freeList.do">자유수다</a></li>
 					<li><a href="km_atPhotoList.do">어택스샷</a></li>
@@ -60,7 +60,7 @@
 				가입공지
 				<ul>
 					<li><a href="km_joinNotice.do">가입공지</a></li>
-					<li><a href="km_joinTest.do">테스트표</a></li>
+<!-- 					<li><a href="km_joinTest.do">테스트표</a></li> -->
 					<li id="joinCheck"><a href="km_joinCheck.do">가입신청</a></li>
 				</ul>
 			</li>

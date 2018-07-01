@@ -17,7 +17,7 @@
 		<%} %>
 		
 		<div class="container">
-			<img src="${pageContext.request.contextPath}/resources/image/km_guildJoin/test.jpg" alt="테스트표">
+			<img src="${pageContext.request.contextPath}/resources/image/km_guildJoin/test.jpeg" alt="테스트표">
 		</div>
 		
 	</body>

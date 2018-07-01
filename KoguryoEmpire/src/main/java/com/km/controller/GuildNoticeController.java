@@ -85,7 +85,7 @@ public class GuildNoticeController {
 	
 	// 글쓰기 완료
 	@RequestMapping(value = "km_noticeWriteOk", method = RequestMethod.GET, produces="text/plain;charset=UTF-8")
-	public String joinOk(Locale locale, Model model, GuildNoticeVO vo) throws Exception {
+	public String noticeWriteOk(Locale locale, Model model, GuildNoticeVO vo) throws Exception {
 		
 		logger.info("공지사항 글쓰기 확인");
 		

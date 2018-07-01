@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -22,45 +23,94 @@
 					<td>Title.</td>
 					<td>Writer.</td>
 					<td>Date.</td>
-					<td>View.</td>
+<!-- 					<td>View.</td> -->
 				</tr>
-				<tr>
-					<td>1</td>
-					<td><a href="km_infoView.do">Member Info Title Test</a></td>
-					<td>KoguryoGuild</td>
-					<td>2018-04-20 12:00</td>
-					<td>50</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td><a href="km_infoView.do">Member Info Title Test</a></td>
-					<td>KoguryoGuild</td>
-					<td>2018-04-20 12:00</td>
-					<td>50</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td><a href="km_infoView.do">Member Info Title Test</a></td>
-					<td>KoguryoGuild</td>
-					<td>2018-04-20 12:00</td>
-					<td>50</td>
-				</tr>
-				<tr>
-					<td>4</td>
-					<td><a href="km_infoView.do">Member Info Title Test</a></td>
-					<td>KoguryoGuild</td>
-					<td>2018-04-20 12:00</td>
-					<td>50</td>
-				</tr>
-				<tr>
-					<td>5</td>
-					<td><a href="km_infoView.do">Member Info Title Test</a></td>
-					<td>KoguryoGuild</td>
-					<td>2018-04-20 12:00</td> 
-					<td>50</td>
-				</tr>
+				<c:forEach items="${selectInfo}" var="selectInfo">
+					<input type="hidden" id="lastNum" value="${selectInfo.infoNum}">
+					<tr>
+						<td>${selectInfo.infoNum}</td>
+						<td><a href="km_infoView.do?infoNum=${selectInfo.infoNum}">${selectInfo.infoName}의 자기소개</a></td>
+						<td>${selectInfo.infoNickname}</td>
+						<td><input type="text" value="${selectInfo.infoWritedate}" class="${selectInfo.infoNum}" style="border:none;" readonly="readonly"></td>
+<!-- 						<td>50</td> -->
+					</tr>
+				</c:forEach>
 			</table>
 			<a href="km_infoWrite.do"><button class="btn">글쓰기</button></a>
 		</div>
 	</body>
+	<script>
+	$(function() {
+		var month = "";
+		var day = "";
+		
+		for (var i=1; i<=parseInt($('#lastNum').val()); i++) {
+			if ($('.'+i).val() != undefined && $('.'+i).val().length > 15) {
+
+				if ($('.'+i).val().substring(0,3) == 'Mon') {
+					day = "월요일";
+				}
+				else if ($('.'+i).val().substring(0,3) == 'Tue') {
+					day = "화요일";
+				}
+				else if ($('.'+i).val().substring(0,3) == 'Wed') {
+					day = "수요일";
+				}
+				else if ($('.'+i).val().substring(0,3) == 'Thu') {
+					day = "목요일";
+				}
+				else if ($('.'+i).val().substring(0,3) == 'Fri') {
+					day = "금요일";
+				}
+				else if ($('.'+i).val().substring(0,3) == 'Sat') {
+					day = "토요일";
+				}
+				else if ($('.'+i).val().substring(0,3) == 'Sun') {
+					day = "일요일";
+				}
+				
+				
+				if ($('.'+i).val().substring(4,7) == 'Jan') {
+					month = "1월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Feb') {
+					month = "2월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Mar') {
+					month = "3월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Apr') {
+					month = "4월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'May') {
+					month = "5월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Jun') {
+					month = "6월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Jul') {
+					month = "7월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Aug') {
+					month = "8월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Sep') {
+					month = "9월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Oct') {
+					month = "10월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Nov') {
+					month = "11월";
+				}
+				else if ($('.'+i).val().substring(4,7) == 'Dec') {
+					month = "12월";
+				}
+				
+				$('.'+i).val(month + ' ' + $('.'+i).val().substring(8,10) + '일 ' + day);
+			}
+		}
+		
+	} );
+	</script>
 </html> 

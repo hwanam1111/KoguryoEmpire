@@ -20,33 +20,51 @@
 			<h3>자기소개</h3>
 			<form>
 				<div class="form-group">
-					<label for="introduceName">이름</label>
-					<input type="text" class="form-control" id="introduceName" name="introduceName" value="김이준" readonly="readonly">
+					<label for="infoName">이름</label>
+					<input type="text" class="form-control" id="infoName" name="infoName" value="${map.infoName}" readonly="readonly">
 				</div>
 				<div class="form-group">
-					<label for="introduceNickname">닉네임</label>
-					<input type="text" class="form-control" id="introduceNickname" name="introduceNickname" value="고구려김이준" readonly="readonly">
+					<label for="infoNickname">닉네임</label>
+					<input type="text" class="form-control" id="infoNickname" name="infoNickname" value="${map.infoNickname}" readonly="readonly">
 				</div>
 				<div class="form-group">
-					<label for="introduceAge">나이</label>
-					<input type="Number" class="form-control" id="introduceAge" name="introduceAge" value="21" readonly="readonly">
+					<label for="infoAge">나이</label>
+					<input type="Number" class="form-control" id="infoAge" name="infoAge" value="${map.infoAge}" readonly="readonly">
 				</div>
 				<div class="form-group">
-					<label for="introduceSex">성별</label>
-					<input type="text" class="form-control" id="introduceSex" name="introduceSex" value="남" readonly="readonly">
+					<label for="infoSex">성별</label>
+					<input type="text" class="form-control" id="infoSex" name="infoSex" value="${map.infoSex}" readonly="readonly">
 				</div>
 				<div class="form-group">
-					<label for="introduceRecommend">추천인</label>
-					<input type="text" class="form-control" id="introduceRecommend" name="introduceRecommend" value="고구려이선호" readonly="readonly">
+					<label for="infoRecommend">추천인</label>
+					<input type="text" class="form-control" id="infoRecommend" name="infoRecommend" value="${map.infoRecommend}" readonly="readonly">
 				</div>
 				<div class="form-group">
-					<label for="introduceLastNickname">이전 닉네임</label>
-					<input type="text" class="form-control" id="introduceLastNickname" name="introduceLastNickname" value="고구려곰준몬" readonly="readonly">
+					<label for="infoLastNickname">이전 길드</label>
+					<input type="text" class="form-control" id="infoLastguild" name="infoLastguild" value="${map.infoLastguild}" readonly="readonly">
 				</div>
 				
+				<input type="hidden" value="${sessionScope.login.memName }" id="sessionName">
+				<input type="hidden" value="${map.infoName}" id="infoName">
+				
 				<div class="clear"></div>
-				<h6>Copyright &copy; 2018 KoguryoEmpire All rights reserved.</h6>
 			</form>
+			<div style="float:left; width:100%; display:none; margin:30px 0 40px 0;" id="buttonDiv">
+				<a href="km_infoUpdateForm.do?infoNum=${map.infoNum}"><button style="width:50%; float:left; height:25px;">수정하기</button></a>
+				<a href="km_infoDelete.do?infoNum=${map.infoNum}"><button style="width:50%; float:right; height:25px;">삭제하기</button></a>
+			</div>
+			<h6>Copyright &copy; 2018 KoguryoEmpire All rights reserved.</h6>
 		</div>
 	</body>
+	
+	<script type="text/javascript"> 
+		$(function() {
+			var sessionName = $('#sessionName').val();
+			var infoName = $('#infoName').val();
+			 
+			if (sessionName == infoName) {
+				$('#buttonDiv').css('display', 'block');
+			}
+		})
+	</script>
 </html> 

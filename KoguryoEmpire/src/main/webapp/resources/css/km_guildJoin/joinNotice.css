@@ -5,22 +5,14 @@
 }
 
 .container {
-	width: 50%;
+	width:100%;
 }
 
-.container div {
-	text-align: left;
-}
-
-.container div p {
-	margin-top: 35px;
-}
-
-.container div p:NTH-CHILD(1) {
-	color: #ff0000;
-	font-size: 17px;
-}
-
-.container div p:LAST-CHILD {
-	color: #ff0000;
+.container img {
+	width:100%;
+	position:relative;
+	bottom:10px;
+/* 	position:absolute; */
+/* 	top:0; */
+/* 	left:0; */
 }

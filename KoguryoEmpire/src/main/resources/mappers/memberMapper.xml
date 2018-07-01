@@ -6,7 +6,7 @@
 <mapper namespace="com.km.mapper.memberMapper">
  	
  	<select id="selectMember" resultType="memberVO">
-        SELECT * FROM MEMBER;
+        SELECT * FROM MEMBER ORDER BY memClass;
     </select>
     
     <insert id="insertMember" parameterType="memberVO">

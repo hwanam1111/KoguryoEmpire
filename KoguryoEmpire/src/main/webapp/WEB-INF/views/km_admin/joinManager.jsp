@@ -97,7 +97,7 @@
 										                    		<input type="hidden" value="${join.joinNum}" name="joinNum">
 										                    	</div>
 									                    	</td>
-									                    	<td><input type="text" value="${join.joinRetestday}" maxlength="0" id="joinRetestday" name="joinRetestday"></td>
+									                    	<td><input type="text" value="${join.joinRetestday}" maxlength="15" id="joinRetestday" class="" name="joinRetestday"></td>
 									                    	<td><button type="submit">수정완료</button></td>
 									                    </form>
 							                        </tr>
@@ -188,7 +188,7 @@
 		
 		
 		
-		$("#joinRetestday").datepicker({
+		$(".joinRetestday").datepicker({
 			changeMonth: true,
 	    	changeYear: true,
 	    	yearRange: "2018:2020",

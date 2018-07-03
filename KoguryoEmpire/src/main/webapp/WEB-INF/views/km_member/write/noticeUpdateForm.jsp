@@ -31,6 +31,7 @@
 					$('#noticeContent').val(data);
 					
 					$('#km_noticeUpdateFormOk').attr("action", "km_noticeUpdateFormOk.do");
+					$('#km_noticeUpdateFormOk').attr("method", "post");
  					$('#km_noticeUpdateFormOk').submit();
 				})
 				

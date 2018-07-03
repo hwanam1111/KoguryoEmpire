@@ -30,7 +30,7 @@
 				가입공지
 				<ul>
 					<li><a href="km_joinNotice.do">가입공지</a></li>
-<!-- 					<li><a href="km_joinTest.do">테스트표</a></li> -->
+					<li><a href="https://docs.google.com/spreadsheets/d/10gmeU-VcUX6j3bN7ZTPpBPFAmIzovYE7oDCm9xe2dAw/edit?usp=sharing">추천참고</a></li>
 					<li><a onclick="joinCheck();">가입신청</a></li>
 				</ul>
 			</li>

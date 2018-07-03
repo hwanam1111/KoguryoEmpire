@@ -31,6 +31,7 @@
 					$('#noticeContent').val(data);
 					
 					$('#noticeWriteOk').attr("action", "km_noticeWriteOk.do");
+					$('#noticeWriteOk').attr("method", "post");
  					$('#noticeWriteOk').submit();
 				})
 				

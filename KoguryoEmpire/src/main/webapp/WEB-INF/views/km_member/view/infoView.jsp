@@ -40,7 +40,7 @@
 					<input type="text" class="form-control" id="infoRecommend" name="infoRecommend" value="${map.infoRecommend}" readonly="readonly">
 				</div>
 				<div class="form-group">
-					<label for="infoLastNickname">이전 길드</label>
+					<label for="infoLastNickname">전 닉네임</label>
 					<input type="text" class="form-control" id="infoLastguild" name="infoLastguild" value="${map.infoLastguild}" readonly="readonly">
 				</div>
 				

@@ -10,10 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.km.dto.GuildNoticeVO;
 import com.km.service.GuildNoticeService;
@@ -84,7 +86,8 @@ public class GuildNoticeController {
 	
 	
 	// 글쓰기 완료
-	@RequestMapping(value = "km_noticeWriteOk", method = RequestMethod.GET, produces="text/plain;charset=UTF-8")
+	@RequestMapping(value = "km_noticeWriteOk", method = RequestMethod.POST, produces="text/plain;charset=UTF-8")
+	@ResponseStatus(value=HttpStatus.OK)
 	public String noticeWriteOk(Locale locale, Model model, GuildNoticeVO vo) throws Exception {
 		
 		logger.info("공지사항 글쓰기 확인");
@@ -144,7 +147,8 @@ public class GuildNoticeController {
 	
 	
 	// 글 수정 완료
-	@RequestMapping(value="km_noticeUpdateFormOk")
+	@RequestMapping(value="km_noticeUpdateFormOk", method = RequestMethod.POST)
+	@ResponseStatus(value=HttpStatus.OK)
 	public String noticeUpdate(GuildNoticeVO nvo, Model model) throws Exception{
 		
 		int resultCnt = service.noticeUpdate(nvo);

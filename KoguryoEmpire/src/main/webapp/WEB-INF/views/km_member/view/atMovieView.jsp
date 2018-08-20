@@ -28,7 +28,7 @@
 				${map.atmovieExplanation}
 			</div>
 			
-			<input type="hidden" value="${sessionScope.login.memName }" id="sessionName">
+			<input type="hidden" value="${sessionScope.login.memNickname }" id="sessionName">
 			<input type="hidden" value="${map.atmovieNickname}" id="atmovieNickname">
 			 
 			<div style="float:left; width:100%; display:none; margin:10px 0 80px 0;" id="buttonDiv"> 

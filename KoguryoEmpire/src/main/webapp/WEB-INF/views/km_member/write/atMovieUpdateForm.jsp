@@ -31,7 +31,8 @@
 					
 				</select>
 				<div class="form-group">
-				    <input type="text" class="form-control" id="atmovieVideo" name="atmovieVideo" placeholder="유튜브 동영상 링크 (홈페이지 용량 문제로 자체 영상 현재로서 불가능)" value="${atMovieUpdateForm.atmovieVideo}">
+				    <input type="text" class="form-control" id="atmovieVideoHidden" name="atmovieVideoHidden" placeholder="유튜브 동영상 링크" value="${atMovieUpdateForm.atmovieVideo}">
+				    <span style="margin-left: 10px; position:relative; top:5px;"><a href="km_atMovieYoutube.do" target="_blank">유뷰트 링크 작성법 ⓘ</a></span>  
 	  			</div>
 	  			<div class="form-group">
 					<input type="text" class="form-control" id="atmovieRider" name="atmovieRider" placeholder="주행자 입력" maxlength="40" value="${atMovieUpdateForm.atmovieRider}">
@@ -44,6 +45,7 @@
 				</div>
 				<input type="hidden" value="${sessionScope.login.memNickname}" name="atmovieNickname">
 				<input type="hidden" value="${atMovieUpdateForm.atmovieNumber }" name="atmovieNumber">
+				<input type="hidden" class="form-control" id="atmovieVideo" name="atmovieVideo" placeholder="유튜브 동영상 링크  바뀌ㅏ는 부분" >
 				<button type="button" class="btn" id="btn">완료</button>
 				
 				<div class="clear"></div>
@@ -56,9 +58,28 @@
 	$(function() {
 		var putMap = <jsp:include page="/WEB-INF/views/km_common/km_timeattack/noneMap.jsp"/>;
 		$('#atmovieMap').html(putMap);
+		
+		var videoLink1 = $('#atmovieVideoHidden').val();
+		
+		var cutIndex1 = parseInt(videoLink1.indexOf("embed/"))+6;
+		
+		var cutVideoId1 = videoLink1.substring(cutIndex1);
+		
+		$('#atmovieVideoHidden').val("https://www.youtube.com/watch?v="+cutVideoId1); 
+		
 	})
 	
 	$('#btn').click(function() {
+		
+		var videoLink2 = $('#atmovieVideoHidden').val();
+		
+		var cutIndex2 = parseInt(videoLink2.indexOf("="))+1;
+		 
+		var cutVideoId2 = videoLink2.substring(cutIndex2);
+		
+		$('#atmovieVideo').val("https://www.youtube.com/embed/"+cutVideoId2);
+		
+		
 		var state = $('#atmovieThemes option:selected').val();
 		if (state == '') {
 			alert('테마를 선택해주세요');

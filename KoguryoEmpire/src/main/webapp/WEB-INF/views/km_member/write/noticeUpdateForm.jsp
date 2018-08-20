@@ -52,7 +52,7 @@
 				</div>
 				<textarea name="contents" id="contents" rows="50" cols="10" class="ckeditor">${noticeUpdateForm.noticeContent}</textarea>
 				
-				<input type="text" name="noticeContent" id="noticeContent">
+				<input type="hidden" name="noticeContent" id="noticeContent">
 				<input type="hidden" value="${sessionScope.login.memNickname}" name="noticeNickname">
 				<input type="hidden" value="${noticeUpdateForm.noticeNum}" name="noticeNum">
 				<fieldset class="submit">

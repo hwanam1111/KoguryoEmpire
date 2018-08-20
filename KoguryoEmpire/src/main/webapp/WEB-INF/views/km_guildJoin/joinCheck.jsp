@@ -23,7 +23,7 @@
 					확인을 하지 않아 생기는 불이익은 모두 <br><br>  가입 신청자에게 있으니 <br><br> 필히 공지사항을 확인해주세요.
 				</p>
 				<a href="km_joinNotice.do"><button class="btn">가입 공지 및 테스트표</button></a><br><br>
-				<a href="km_joinRequest.do"><button class="btn">가입 신청</button></a>
+				<a href="km_joinNotice.do"><button class="btn">가입 신청</button></a>
 			</div>
 		</div>
 		

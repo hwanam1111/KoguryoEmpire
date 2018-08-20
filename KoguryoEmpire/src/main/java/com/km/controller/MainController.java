@@ -119,12 +119,12 @@ public class MainController {
 	
 		if(ok!=null){
 			result = "km_main/loginOk";
-			message = ok.getMemEmail()+"님 로그인하셨습니다.";
+			message = ok.getMemNickname()+"님 로그인하셨습니다.";
 			model.addAttribute("vo",ok);
 			session.setAttribute("login", ok);
 		} else {
 			result="km_main/loginOk";
-			message="로그인실패";
+			message="회원님의 아이디나 비밀번호가 일치하지 않습니다.";
 			
 		}
 		

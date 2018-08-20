@@ -56,7 +56,7 @@
 				<input type="hidden" name="noticeContent" id="noticeContent">
 				<input type="hidden" value="${sessionScope.login.memNickname}" name="noticeNickname">
 				<fieldset class="submit">
-					<button type="button" class="btn" id="submitBtn"">확인</button>
+					<button type="button" class="btn" id="submitBtn">확인</button>
 				</fieldset>
 				
 			</form>

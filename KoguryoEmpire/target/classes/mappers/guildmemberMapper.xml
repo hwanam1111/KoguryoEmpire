@@ -54,6 +54,34 @@
 	<delete id="infoDelete" parameterType="hashmap">
 		DELETE FROM MEMBER_INFO where infonum=#{infoNum}
 	</delete>
+	
+	
+	
+	<insert id="insertAttackMovie" parameterType="guildattackmovieVO" useGeneratedKeys="true" keyProperty="atmovieNumber">
+    	INSERT INTO MEMBER_ATTACKMOVIE(atmovieThemes, atmovieNickname, atmovieMap, atmovieVideo, atmovieRider, atmovieTime, atmovieExplanation, atmovieWritedate) VALUES(#{atmovieThemes}, #{atmovieNickname}, #{atmovieMap}, #{atmovieVideo}, #{atmovieRider}, #{atmovieTime}, #{atmovieExplanation}, curdate());
+    </insert>
+    
+    <select id="selectAttackMovie" resultType="guildattackmovieVO">
+        SELECT * FROM MEMBER_ATTACKMOVIE ORDER BY ATMOVIENUMBER DESC; 
+    </select>
+    
+    <select id="atmovieView" parameterType="hashmap" resultType="guildattackmovieVO"> 
+		select * from MEMBER_ATTACKMOVIE where atmovieNumber=#{atmovieNumber}
+	</select>
+	
+	<select id="atmovieUpdateForm" parameterType="guildattackmovieVO" resultType="guildattackmovieVO">
+		select * from MEMBER_ATTACKMOVIE where atmovieNumber=#{atmovieNumber}
+	</select>
+	
+	<update id="atmovieUpdate" parameterType="guildattackmovieVO">
+		UPDATE MEMBER_ATTACKMOVIE SET atmovieThemes=#{atmovieThemes}, atmovieMap=#{atmovieMap}, atmovieVideo=#{atmovieVideo}, atmovieRider=#{atmovieRider}, atmovieTime=#{atmovieTime}, atmovieExplanation=#{atmovieExplanation} WHERE atmovieNumber=#{atmovieNumber}
+	</update>
+	
+	<delete id="atmovieDelete" parameterType="hashmap">
+		DELETE FROM MEMBER_ATTACKMOVIE where atmovieNumber=#{atmovieNumber}
+	</delete>
+	
+    
     
 	
 </mapper>

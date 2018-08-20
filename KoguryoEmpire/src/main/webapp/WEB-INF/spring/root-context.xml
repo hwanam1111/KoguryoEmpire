@@ -32,8 +32,8 @@
         <property name="url"
             value="jdbc:log4jdbc:mysql://127.0.0.1:3306/koguryoempire?useSSL=false&amp;serverTimezone=UTC">
         </property>
-        <property name="username" value="koguryoempire"></property>
-        <property name="password" value="koguryoempire"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="cloucktpzjs1"></property>
     </bean> 
     
     <!-- mybatis SqlSessionFactoryBean -->

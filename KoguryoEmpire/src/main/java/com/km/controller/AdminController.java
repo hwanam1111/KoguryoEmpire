@@ -25,7 +25,7 @@ import com.km.service.MemberService;
 
 
 
-@Controller
+@Controller 
 public class AdminController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(AdminController.class);

@@ -4,7 +4,7 @@
 <%
 	Object obj = session.getAttribute("login");
 	MemberVO mvo = (MemberVO)obj;
-%>
+%> 
 <!DOCTYPE html>
 <html>
 	<head>

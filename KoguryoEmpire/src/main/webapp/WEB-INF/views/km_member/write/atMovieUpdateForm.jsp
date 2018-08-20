@@ -31,20 +31,19 @@
 					
 				</select>
 				<div class="form-group">
-				    <input type="text" class="form-control" id="atmovieVideoHidden" name="atmovieVideoHidden" placeholder="유튜브 동영상 링크 ">
-				    <span style="margin-left: 10px; position:relative; top:5px;"><a href="km_atMovieYoutube.do" target="_blank">유뷰트 링크 작성법 ⓘ</a></span>  
-	  			</div> 
+				    <input type="text" class="form-control" id="atmovieVideo" name="atmovieVideo" placeholder="유튜브 동영상 링크 (홈페이지 용량 문제로 자체 영상 현재로서 불가능)" value="${atMovieUpdateForm.atmovieVideo}">
+	  			</div>
 	  			<div class="form-group">
-					<input type="text" class="form-control" id="atmovieRider" name="atmovieRider" placeholder="주행자 입력" maxlength="40">
+					<input type="text" class="form-control" id="atmovieRider" name="atmovieRider" placeholder="주행자 입력" maxlength="40" value="${atMovieUpdateForm.atmovieRider}">
 				</div>
 	  			<div class="form-group">
-					<input type="text" class="form-control" id="atmovieTime" name="atmovieTime" placeholder="시간 입력" maxlength="40">
+					<input type="text" class="form-control" id="atmovieTime" name="atmovieTime" placeholder="시간 입력" maxlength="40" value="${atMovieUpdateForm.atmovieTime}">
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control" id="atmovieExplanation" name="atmovieExplanation" placeholder="한줄 설명" maxlength="40">
+					<input type="text" class="form-control" id="atmovieExplanation" name="atmovieExplanation" placeholder="한줄 설명" maxlength="40" value="${atMovieUpdateForm.atmovieExplanation}">
 				</div>
 				<input type="hidden" value="${sessionScope.login.memNickname}" name="atmovieNickname">
-				<input type="hidden" class="form-control" id="atmovieVideo" name="atmovieVideo" placeholder="유튜브 동영상 링크  바뀌ㅏ는 부분">
+				<input type="hidden" value="${atMovieUpdateForm.atmovieNumber }" name="atmovieNumber">
 				<button type="button" class="btn" id="btn">완료</button>
 				
 				<div class="clear"></div>
@@ -60,16 +59,6 @@
 	})
 	
 	$('#btn').click(function() {
-		
-		var videoLink = $('#atmovieVideoHidden').val();
-		
-		var cutIndex = parseInt(videoLink.indexOf("="))+1;
-		 
-		var cutVideoId = videoLink.substring(cutIndex);
-		
-		$('#atmovieVideo').val("https://www.youtube.com/embed/"+cutVideoId);
-		
-		
 		var state = $('#atmovieThemes option:selected').val();
 		if (state == '') {
 			alert('테마를 선택해주세요');
@@ -95,9 +84,7 @@
 			return false;
 		} 
 		
-		
-		
-		$('#atMovieWriteForm').attr("action","km_atMovieWriteOk.do");
+		$('#atMovieWriteForm').attr("action","km_atmovieUpdateFormOk.do");
 		$('#atMovieWriteForm').attr("method","post");
 // 		$('#atMovieWriteForm').attr("enctype","multipart/form-data");
 		$('#atMovieWriteForm').submit();

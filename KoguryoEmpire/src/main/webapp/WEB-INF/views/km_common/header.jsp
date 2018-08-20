@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <script>
 	function joinCheck() {
-		alert('회원가입후 이용 가능합니다.');
+		alert('로그인 이후 가입신청이 가능합니다.');
 	}
 </script>
 <header>

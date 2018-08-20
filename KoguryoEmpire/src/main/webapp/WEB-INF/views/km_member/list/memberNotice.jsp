@@ -15,7 +15,7 @@
 			<jsp:include page="/WEB-INF/views/km_common/header.jsp"/>
 		<%} else { %>
 			<jsp:include page="/WEB-INF/views/km_common/afterHeader.jsp"/>
-		<%} %>
+		<%} %> 
 		<div class="container">
 			<table class="table table-bordered">
 				<tr>

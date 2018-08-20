@@ -8,7 +8,7 @@ iframe {
 	margin-bottom:40px;
 	margin-left:5%;
 	width: 90%;
-	height: 450px;
+	height: 600px;
 } 
 
 .container {
@@ -22,22 +22,13 @@ iframe {
 }
 
 .table tr>td:NTH-CHILD(1) {
-	width: 15%;
+	width: 20%;
+	border-right:1px solid #ddd;
 }
 
 .table tr>td:NTH-CHILD(2) {
-	width: 15%;
+	width: 80%;
 }
-
-.table tr>td:NTH-CHILD(3) {
-	width: 60%;
-	text-align: right;
-}
-
-.table>tr>td:NTH-CHILD(4) {
-	width: 10%;
-}
-
 .content {
 	width: 100%;
 	background-color: #f9f9f9;

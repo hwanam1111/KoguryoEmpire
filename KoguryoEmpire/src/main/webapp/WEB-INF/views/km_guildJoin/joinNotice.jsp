@@ -17,7 +17,11 @@
 		<%} %>
 		
 		<div class="container">
-			<img src="${pageContext.request.contextPath}/resources/image/km_guildJoin/test.jpeg" alt="테스트표">
+<%-- 			<img src="${pageContext.request.contextPath}/resources/image/km_guildJoin/test.jpeg" alt="테스트표"> --%>
+		
+		<h1>길드원 모집 당분간 중단합니다.</h1>
+		<h1>길드 내부 재정비 후 다시 길드원 모집 시작하겠습니다.</h1>
+		<h1>궁금하신점은 넥슨플러그 : '고구려곰준이' 로 문의 부탁드립니다.</h1>
 		</div>
 		
 	</body>
